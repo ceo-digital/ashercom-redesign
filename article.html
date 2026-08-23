@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>מאמר — אשר תקשורת</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/article.css">
+</head>
+<body data-theme="server" data-nav="articles" data-contact="local">
+  <div id="site-header"></div>
+  <main id="main"></main>
+  <div id="site-footer"></div>
+  <script src="js/chrome.js"></script>
+  <script src="js/articles-data.js"></script>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const id = params.get("id") || "internet-infra";
+    const all = window.ASHER_ARTICLES || [];
+    const article = all.find(a => a.id === id) || all[0];
+    const related = (article.related || []).map(rid => all.find(a => a.id === rid)).filter(Boolean).slice(0, 3);
+    document.title = article.title + " — אשר תקשורת";
+    document.getElementById("main").innerHTML = `
+      <section class="article-hero">
+        <div class="wrap">
+          <div class="crumbs">
+            <a href="index.html">בית</a>
+            <span>·</span>
+            <a href="articles.html">מאמרים</a>
+            <span>·</span>
+            <span>${article.tag}</span>
+          </div>
+          <div class="article-kicker">${article.tag}</div>
+          <h1>${article.title}</h1>
+          <p class="meta">${article.read} · אשר תקשורת</p>
+        </div>
+      </section>
+      <section class="article-body-band">
+      <div class="wrap article-layout">
+        <article class="prose">${article.body}</article>
+        <aside class="article-cover">
+          <img src="${article.img}" alt="">
+        </aside>
+      </div>
+      </section>
+      <section class="related">
+        <div class="wrap">
+          <h2>עוד לקריאה</h2>
+          <div class="related-grid">
+            ${related.map(r => `
+              <a class="article" href="article.html?id=${r.id}">
+                <img src="${r.img}" alt="">
+                <div class="article-body">
+                  <span>${r.tag}</span>
+                  <h3>${r.title}</h3>
+                  <p>${r.dek}</p>
+                </div>
+              </a>`).join("")}
+          </div>
+        </div>
+      </section>
+      ${window.ASHER_CONTACT_HTML || ""}
+    `;
+  </script>
+</body>
+</html>

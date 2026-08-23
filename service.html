@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>שירות — אשר תקשורת</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/article.css">
+</head>
+<body data-theme="server" data-nav="">
+  <div id="site-header"></div>
+  <main id="main"></main>
+  <div id="site-footer"></div>
+  <script src="js/chrome.js"></script>
+  <script src="js/services-data.js"></script>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const id = params.get("id") || "fiber";
+    const all = window.ASHER_SERVICES || [];
+    const service = all.find(s => s.id === id) || all[0];
+    const related = (service.related || []).map(rid => all.find(s => s.id === rid)).filter(Boolean).slice(0, 3);
+    document.title = service.title + " — אשר תקשורת";
+    document.getElementById("main").innerHTML = `
+      <section class="article-hero">
+        <div class="wrap">
+          <div class="crumbs">
+            <a href="index.html">בית</a>
+            <span>·</span>
+            <a href="index.html#services">שירותים</a>
+            <span>·</span>
+            <span>${service.tag}</span>
+          </div>
+          <div class="article-kicker">${service.tag}</div>
+          <h1>${service.title}</h1>
+          <p class="meta">${service.read} · אשר תקשורת</p>
+        </div>
+      </section>
+      <section class="article-body-band">
+      <div class="wrap article-layout">
+        <article class="prose">${service.body}</article>
+        <aside class="article-cover">
+          <img src="${service.img}" alt="">
+        </aside>
+      </div>
+      </section>
+      <section class="related">
+        <div class="wrap">
+          <h2>עוד לקריאה</h2>
+          <div class="related-grid">
+            ${related.map(r => `
+              <a class="article" href="service.html?id=${r.id}">
+                <img src="${r.img}" alt="">
+                <div class="article-body">
+                  <span>${r.tag}</span>
+                  <h3>${r.title}</h3>
+                  <p>${r.dek}</p>
+                </div>
+              </a>`).join("")}
+          </div>
+        </div>
+      </section>
+      <section class="svc-strip">
+        <div class="wrap">
+          <div class="svc-pills">
+            <a href="service.html?id=servers">ארונות שרתים</a>
+            <a href="service.html?id=cameras">מצלמות אבטחה</a>
+            <a href="service.html?id=fiber">סיבים אופטיים</a>
+            <a href="service.html?id=network">רשתות מחשבים</a>
+            <a href="service.html?id=telephony">טלפוניה</a>
+            <a href="service.html?id=lowvoltage">מתח נמוך</a>
+          </div>
+        </div>
+      </section>
+    `;
+  </script>
+</body>
+</html>
