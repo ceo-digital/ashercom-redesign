@@ -19,18 +19,29 @@
               <span class="phone-cta">חייגו עכשיו</span>
             </a>
           </div>
-          <form onsubmit="event.preventDefault(); this.querySelector('[type=submit]').textContent='נשלח — נחזור אליכם';">
-            <div class="row-2">
-              <div>
-                <label for="c-name">שם</label>
-                <input id="c-name" name="name" required autocomplete="name">
+          <form class="contact-form">
+            <div class="form-fields">
+              <div class="row-2">
+                <div>
+                  <label for="c-name">שם</label>
+                  <input id="c-name" name="name" required autocomplete="name">
+                </div>
+                <div>
+                  <label for="c-phone">טלפון</label>
+                  <input id="c-phone" name="phone" type="tel" required autocomplete="tel">
+                </div>
               </div>
               <div>
-                <label for="c-phone">טלפון</label>
-                <input id="c-phone" name="phone" type="tel" required autocomplete="tel">
+                <label for="c-reason">סיבת הפנייה</label>
+                <textarea class="reason" id="c-reason" name="reason" required maxlength="240" rows="3" placeholder="בקצרה — במה אפשר לעזור?"></textarea>
               </div>
+              <button class="btn btn-fill" type="submit" style="width:max-content">שליחת פנייה</button>
             </div>
-            <button class="btn btn-fill" type="submit" style="width:max-content">שליחת פנייה</button>
+            <div class="form-thanks" role="status" aria-live="polite">
+              <div class="form-thanks-kicker">תודה</div>
+              <h3>פנייתך התקבלה</h3>
+              <p>נחזור אליכם בהקדם.</p>
+            </div>
             <div class="contact-visual" aria-hidden="true">
               <img class="contact-visual-bg" src="assets/contact-infra.png" alt="">
               <img class="contact-visual-logo" src="assets/logo-asher.png" alt="">
@@ -61,9 +72,6 @@
       <div class="mast-end">
         <a class="mast-phone" href="tel:1700505616">1-700-505-616</a>
         <div class="socials">
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="אינסטגרם">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg>
-          </a>
           <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="פייסבוק">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h3l1-3h-4V10c0-.6.4-1 1-1z"/></svg>
           </a>
@@ -140,7 +148,7 @@
             <li class="foot-meta">טלפון: <a href="tel:1700505616">1700-505-616</a></li>
             <li class="foot-email">
               <span>דוא״ל:</span>
-              <a href="mailto:office@ashercom.com">office@ashercom.com</a>
+              <a href="mailto:asher@ashercom.com">asher@ashercom.com</a>
             </li>
           </ul>
         </div>

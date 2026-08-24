@@ -89,8 +89,14 @@ window.ASHER_EN = {
   "contact.call.cta": "Call now",
   "form.name": "Name",
   "form.phone": "Phone",
+  "form.reason": "Reason for inquiry",
+  "form.reason.ph": "Briefly — how can we help?",
   "form.send": "Send inquiry",
+  "form.sending": "Sending…",
   "form.sent": "Sent — we will get back to you",
+  "form.thanks.kicker": "Thank you",
+  "form.thanks.title": "Your inquiry has been received",
+  "form.thanks.p": "We will get back to you shortly.",
   "foot.nav.aria": "Footer navigation",
   "foot.main": "Main menu",
   "foot.home": "Home",
@@ -186,6 +192,12 @@ window.ASHER_EN = {
       if (!el.dataset.i18nAltHe) el.dataset.i18nAltHe = el.getAttribute("alt") || "";
       const key = el.getAttribute("data-i18n-alt");
       el.setAttribute("alt", lang === "en" ? (EN[key] || el.dataset.i18nAltHe) : el.dataset.i18nAltHe);
+    });
+
+    document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+      if (!el.dataset.i18nPhHe) el.dataset.i18nPhHe = el.getAttribute("placeholder") || "";
+      const key = el.getAttribute("data-i18n-placeholder");
+      el.setAttribute("placeholder", lang === "en" ? (EN[key] || el.dataset.i18nPhHe) : el.dataset.i18nPhHe);
     });
 
     document.title = lang === "en" ? EN["meta.title"] : heTitle;
