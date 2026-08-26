@@ -53,10 +53,15 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 128px;
       overflow-x: clip;
       width: 100%;
       max-width: 100%;
       overscroll-behavior-x: none;
+    }
+    :focus-visible {
+      outline: 3px solid var(--accent-2);
+      outline-offset: 3px;
     }
     body {
       font-family: "IBM Plex Sans Hebrew", sans-serif;
@@ -75,10 +80,10 @@
     main { overflow-x: clip; max-width: 100%; }
 
     .skip {
-      position: absolute; right: 16px; top: -40px; background: var(--accent); color: #fff;
-      padding: 8px 14px; z-index: 200; border-radius: 4px;
+      position: absolute; right: 16px; top: -40px; background: var(--ink); color: #fff;
+      padding: 8px 14px; z-index: 240; border-radius: 4px; font-weight: 700;
     }
-    .skip:focus { top: 12px; }
+    .skip:focus, .skip:focus-visible { top: 12px; outline-color: var(--accent-2); }
 
     header.site {
       position: sticky; top: 0; z-index: 50;
@@ -702,21 +707,52 @@
     }
     .a11y-btn { background: var(--ink); }
     .a11y-panel {
-      display: none; position: absolute; bottom: 70px; left: 0; width: 240px;
+      display: none; position: absolute; bottom: 70px; left: 0; width: 260px;
+      max-height: min(70vh, 540px); overflow: auto;
       background: var(--cream); color: var(--ink); border: 1px solid var(--line);
-      border-radius: 16px; padding: 16px; box-shadow: 0 16px 40px rgba(0,0,0,.12); text-align: right;
+      border-radius: 16px; padding: 14px; box-shadow: 0 16px 40px rgba(0,0,0,.12); text-align: right;
     }
     .a11y-panel.is-open { display: block; }
-    .a11y-panel h4 { font-size: 14px; margin-bottom: 10px; }
+    .a11y-panel[hidden] { display: none !important; }
+    .a11y-panel h2 { font-size: 14px; margin: 0 0 4px; max-width: none; }
+    .a11y-note { font-size: 11px; color: var(--muted); margin: 0 0 10px; line-height: 1.4; }
     .a11y-panel button {
-      width: 100%; height: auto; border-radius: 10px; background: var(--paper);
+      width: 100%; min-height: 40px; height: auto; border-radius: 10px; background: var(--paper);
       color: var(--ink); border: 1px solid var(--line); padding: 8px 10px; margin-bottom: 6px;
-      font-size: 13px; font-weight: 600; box-shadow: none; display: block;
+      font-size: 13px; font-weight: 600; box-shadow: none; display: block; cursor: pointer;
+    }
+    .a11y-panel button.is-on {
+      border-color: var(--accent-deep); background: var(--accent-soft); color: var(--ink);
+    }
+    .a11y-statement {
+      display: block; text-align: center; margin-top: 8px;
+      font-size: 13px; font-weight: 700; text-decoration: underline;
+      color: var(--accent-deep); padding: 6px 0;
     }
 
-    body.a11y-lg { font-size: 18px; }
-    body.a11y-contrast { --paper: #fff; --cream: #fff; --ink: #000; --muted: #222; --accent: #0A6FA3; }
-    body.a11y-links a { text-decoration: underline; }
+    html.a11y-lg, html.a11y-lg body, body.a11y-lg { font-size: 18px; }
+    html.a11y-xl, html.a11y-xl body, body.a11y-xl { font-size: 21px; }
+    html.a11y-links a, body.a11y-links a { text-decoration: underline; text-underline-offset: 3px; }
+    html.a11y-spacing body, body.a11y-spacing {
+      line-height: 1.9; letter-spacing: .03em; word-spacing: .12em;
+    }
+    html.a11y-readable body, body.a11y-readable { font-weight: 500; line-height: 1.85; }
+    html.a11y-readable p, html.a11y-readable li { max-width: 70ch; }
+    html.a11y-motion, html.a11y-motion *, html.a11y-motion *::before, html.a11y-motion *::after {
+      animation: none !important; transition: none !important; scroll-behavior: auto !important;
+    }
+    html.a11y-motion animate, html.a11y-motion animateMotion { display: none !important; }
+    html.a11y-contrast,
+    html.a11y-contrast [data-theme="server"],
+    html.a11y-contrast [data-theme="signal"],
+    body.a11y-contrast {
+      --paper: #fff; --paper-2: #fff; --cream: #fff;
+      --ink: #000; --ink-2: #000; --muted: #111;
+      --accent: #005A9E; --accent-deep: #004C86; --accent-2: #000;
+      --hero: #000; --hero-text: #fff; --hero-muted: #f2f2f2;
+      --line: #000; --glow: transparent;
+    }
+    html.a11y-contrast a { text-decoration: underline; }
 
     .palette-switch {
       position: fixed; right: 22px; bottom: 22px; z-index: 80;
@@ -1105,6 +1141,8 @@
 
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation: none !important; transition: none !important; }
+      html { scroll-behavior: auto !important; }
+      animate, animateMotion { display: none !important; }
       .rise, .inview, .svc { opacity: 1; transform: none; }
       .svc-visual img { transform: none; }
       .steps::before { transform: none; }
@@ -1155,7 +1193,7 @@
       <div class="mast-end">
         <a class="mast-phone" href="tel:1700505616">1-700-505-616</a>
         <div class="socials">
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="פייסבוק" data-i18n-aria="fb.aria">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="פייסבוק — נפתח בחלון חדש" data-i18n-aria="fb.aria">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h3l1-3h-4V10c0-.6.4-1 1-1z"/></svg>
           </a>
         </div>
@@ -1169,7 +1207,7 @@
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" tabindex="-1">
     <section class="hero" id="top">
       <div class="hero-bg"></div>
       <div class="hero-grid-lines"></div>
@@ -1515,6 +1553,7 @@
             </li>
             <li><a href="privacy.html" data-i18n="foot.privacy">מדיניות פרטיות</a></li>
             <li><button type="button" class="privacy-open" data-i18n="foot.prefs">ניהול העדפות</button></li>
+            <li><a href="accessibility.html" data-i18n="foot.a11y">הצהרת נגישות</a></li>
           </ul>
         </div>
       </nav>
@@ -1544,21 +1583,15 @@
 
   <div class="float-btns">
     <div style="position:relative">
-      <div class="a11y-panel" id="a11y">
-        <h4 data-i18n="a11y.title">נגישות</h4>
-        <button type="button" onclick="document.body.classList.toggle('a11y-lg')" data-i18n="a11y.font">הגדלת גופן</button>
-        <button type="button" onclick="document.body.classList.toggle('a11y-contrast')" data-i18n="a11y.contrast">ניגודיות גבוהה</button>
-        <button type="button" onclick="document.body.classList.toggle('a11y-links')" data-i18n="a11y.links">הדגשת קישורים</button>
-        <button type="button" onclick="document.body.className='';" data-i18n="a11y.reset">איפוס</button>
-      </div>
-      <button class="a11y-btn" type="button" aria-label="תפריט נגישות" data-i18n-aria="a11y.aria" onclick="document.getElementById('a11y').classList.toggle('is-open')">
+      <div class="a11y-panel" id="a11y" hidden></div>
+      <button class="a11y-btn" type="button" aria-label="תפריט נגישות" aria-expanded="false" aria-controls="a11y" data-i18n-aria="a11y.aria">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <circle cx="12" cy="5" r="2.2" fill="currentColor"/>
           <path d="M4 9h16M12 9v11M8 21V13.5M16 21V13.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
       </button>
     </div>
-    <a class="wa" href="https://wa.me/972507228900" target="_blank" rel="noopener" aria-label="וואטסאפ" data-i18n-aria="wa.aria">
+    <a class="wa" href="https://wa.me/972507228900" target="_blank" rel="noopener noreferrer" aria-label="וואטסאפ — נפתח בחלון חדש" data-i18n-aria="wa.aria">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M20.5 3.5A11 11 0 0 0 2.1 17.8L1 23l5.3-1.1A11 11 0 0 0 12 23a11 11 0 0 0 8.5-19.5zM12 21a9 9 0 0 1-4.6-1.3l-.3-.2-3.1.7.7-3-.2-.3A9 9 0 1 1 12 21zm5-6.7c-.3-.1-1.6-.8-1.8-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6.1a7.4 7.4 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5.1-.2a.5.5 0 0 0 0-.5c0-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4.1 5.3 5.3 0 0 0 3 .8 2.6 2.6 0 0 0 1.7-.8 2.1 2.1 0 0 0 .5-1.5c0-.2 0-.3-.2-.4z"/>
       </svg>
@@ -1568,6 +1601,7 @@
   <script src="js/home-i18n.js"></script>
   <script src="js/contact-form.js"></script>
   <script src="js/privacy-consent.js"></script>
+  <script src="js/a11y.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
   <script>

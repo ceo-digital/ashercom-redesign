@@ -17,6 +17,7 @@
   <script src="js/chrome.js"></script>
   <script src="js/contact-form.js"></script>
   <script src="js/privacy-consent.js"></script>
+  <script src="js/a11y.js"></script>
   <script src="js/services-data.js"></script>
   <script>
     const params = new URLSearchParams(location.search);
@@ -44,7 +45,7 @@
       <div class="wrap article-layout">
         <article class="prose">${service.body}</article>
         <aside class="article-cover">
-          <img src="${service.img}" alt="">
+          <img src="${service.img}" alt="${service.title}">
         </aside>
       </div>
       </section>
