@@ -535,7 +535,7 @@
     .foot-cols summary::-webkit-details-marker,
     .foot-cols summary::marker { display: none; content: none; }
     .foot-cols ul { list-style: none; display: grid; gap: 7px; }
-    .foot-cols li > a, .foot-meta {
+    .foot-cols li > a, .foot-cols li > .privacy-open, .foot-meta {
       display: flex; align-items: center; gap: 8px;
       font-size: 13px; color: rgba(255,255,255,.86); line-height: 1.35;
       transition: color .2s;
@@ -639,6 +639,63 @@
     .wa { background: var(--wa); animation: waPulse 2.8s ease-in-out infinite; }
     .float-btns .wa { width: 76px; height: 76px; }
     .float-btns .wa svg { width: 36px; height: 36px; }
+
+    body:has(#privacy-gate:not([hidden])) .float-btns { bottom: 118px; }
+    body:has(#privacy-gate.is-prefs:not([hidden])) .float-btns { bottom: 200px; }
+    .privacy-gate {
+      position: fixed; left: 0; right: 0; bottom: 0; top: auto; z-index: 220;
+      background: transparent;
+      display: block; padding: 0 12px 10px;
+      padding-bottom: max(10px, env(safe-area-inset-bottom));
+      pointer-events: none;
+    }
+    .privacy-gate[hidden] { display: none !important; }
+    .privacy-card {
+      pointer-events: auto;
+      width: min(880px, 100%); margin: 0 auto;
+      max-height: none; overflow: auto;
+      background: var(--cream); color: var(--ink);
+      border: 1px solid var(--line); border-radius: 14px;
+      padding: 10px 14px;
+      box-shadow: 0 -6px 22px rgba(0,0,0,.16);
+      text-align: right;
+    }
+    .privacy-gate.is-prefs .privacy-card { max-height: min(42vh, 340px); }
+    .privacy-bar {
+      display: flex; flex-wrap: wrap; align-items: center;
+      justify-content: space-between; gap: 8px 14px;
+    }
+    .privacy-copy { flex: 1 1 240px; min-width: 0; }
+    .privacy-card h2 { font-size: .95rem; max-width: none; margin: 0; }
+    .privacy-lead { font-size: 12px; line-height: 1.4; color: var(--muted); margin: 3px 0 0; }
+    .privacy-lead a { color: var(--accent-deep); font-weight: 600; }
+    .privacy-actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0; flex: 0 0 auto; }
+    .privacy-card .btn { height: 34px; min-height: 34px; padding: 0 11px; font-size: 12px; }
+    .privacy-card .btn-ghost {
+      background: var(--paper); border-color: var(--line); color: var(--ink);
+    }
+    .privacy-panel { display: none; }
+    .privacy-gate.is-prefs .privacy-home { display: none; }
+    .privacy-gate.is-prefs .privacy-panel { display: block; margin-top: 8px; }
+    .privacy-panel .privacy-actions { margin-top: 8px; }
+    .privacy-panel fieldset { border: 1px solid var(--line); border-radius: 10px; padding: 6px 10px; }
+    .privacy-panel legend { font-size: 12px; font-weight: 700; padding: 0 6px; }
+    .privacy-row {
+      display: grid; grid-template-columns: auto 1fr; gap: 8px;
+      align-items: start; padding: 5px 2px; font-size: 12px; line-height: 1.35;
+    }
+    .privacy-row input, .consent-check input { width: auto; margin-top: 3px; accent-color: var(--accent); }
+    .privacy-row b { display: block; margin-bottom: 1px; }
+    .consent-check {
+      display: grid; grid-template-columns: auto 1fr; gap: 10px;
+      font-size: 13px; line-height: 1.5; color: var(--muted); align-items: start;
+    }
+    .consent-check a { color: var(--accent-deep); font-weight: 600; }
+    .foot-cols .privacy-open {
+      background: none; border: none; padding: 0; cursor: pointer;
+      font: inherit; color: rgba(255,255,255,.86); text-align: inherit;
+    }
+    .foot-cols .privacy-open:hover { color: var(--accent-2); }
     @keyframes waPulse {
       0%, 100% { box-shadow: 0 10px 24px rgba(0,0,0,.18); }
       50% { box-shadow: 0 10px 24px rgba(37,211,102,.45), 0 0 0 8px rgba(37,211,102,.16); }
@@ -1371,6 +1428,10 @@
                 <label for="reason" data-i18n="form.reason">סיבת הפנייה</label>
                 <textarea class="reason" id="reason" name="reason" required maxlength="240" rows="3" data-i18n-placeholder="form.reason.ph" placeholder="בקצרה — במה אפשר לעזור?"></textarea>
               </div>
+              <label class="consent-check">
+                <input type="checkbox" name="privacy_consent" value="yes" required>
+                <span data-i18n-html data-i18n="form.privacy">מסירת הפרטים אינה חובה חוקית. אי־הסכמה תמנע שליחת הפנייה. קראתי את <a href="privacy.html">מדיניות הפרטיות</a> ואני מסכים/ה לעיבוד פרטיי לצורך טיפול בפנייה בלבד.</span>
+              </label>
               <button class="btn btn-fill" type="submit" style="width:max-content" data-i18n="form.send">שליחת פנייה</button>
             </div>
             <div class="form-thanks" role="status" aria-live="polite">
@@ -1452,6 +1513,8 @@
               <span data-i18n="foot.email">דוא״ל:</span>
               <a href="mailto:asher@ashercom.com">asher@ashercom.com</a>
             </li>
+            <li><a href="privacy.html" data-i18n="foot.privacy">מדיניות פרטיות</a></li>
+            <li><button type="button" class="privacy-open" data-i18n="foot.prefs">ניהול העדפות</button></li>
           </ul>
         </div>
       </nav>
@@ -1504,6 +1567,7 @@
 
   <script src="js/home-i18n.js"></script>
   <script src="js/contact-form.js"></script>
+  <script src="js/privacy-consent.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
   <script>

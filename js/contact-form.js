@@ -10,6 +10,7 @@
       name: (form.querySelector("[name=name]") || {}).value || "",
       phone: (form.querySelector("[name=phone]") || {}).value || "",
       reason: (form.querySelector("[name=reason]") || {}).value || "",
+      privacy_consent: (form.querySelector("[name=privacy_consent]") || {}).checked ? "yes" : "no",
       _subject: "פנייה חדשה מהאתר — אשר תקשורת"
     };
 

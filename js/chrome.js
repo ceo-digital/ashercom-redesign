@@ -35,6 +35,10 @@
                 <label for="c-reason">סיבת הפנייה</label>
                 <textarea class="reason" id="c-reason" name="reason" required maxlength="240" rows="3" placeholder="בקצרה — במה אפשר לעזור?"></textarea>
               </div>
+              <label class="consent-check">
+                <input type="checkbox" name="privacy_consent" value="yes" required>
+                <span>מסירת הפרטים אינה חובה חוקית. אי־הסכמה תמנע שליחת הפנייה. קראתי את <a href="privacy.html">מדיניות הפרטיות</a> ואני מסכים/ה לעיבוד פרטיי לצורך טיפול בפנייה בלבד.</span>
+              </label>
               <button class="btn btn-fill" type="submit" style="width:max-content">שליחת פנייה</button>
             </div>
             <div class="form-thanks" role="status" aria-live="polite">
@@ -150,6 +154,8 @@
               <span>דוא״ל:</span>
               <a href="mailto:asher@ashercom.com">asher@ashercom.com</a>
             </li>
+            <li><a href="privacy.html">מדיניות פרטיות</a></li>
+            <li><button type="button" class="privacy-open">ניהול העדפות</button></li>
           </ul>
         </div>
       </nav>
