@@ -72,7 +72,7 @@
             <li>הקמת תשתיות למרכזיות IP של חברת בזק.</li>
           </ul>
           <blockquote>אנו מזמינים גם אתכם להצטרף לעשרות הלקוחות שכבר עובדים אתנו, ונשמח לראות אתכם נהנים מפתרונות תקשורת ואינטגרציה מתקדמים, אשר ייקחו את העסק שלכם לשלב הבא.</blockquote>
-          <p>לפרטים נוספים או לקביעת פגישת ייעוץ <a href="index.html#contact">צרו קשר</a> או השאירו את פרטיכם ואחד מנציגי השירות שלנו יחזור אליכם בהקדם האפשרי.</p>
+          <p>לפרטים נוספים או לקביעת פגישת ייעוץ <a href="צור-קשר/">צרו קשר</a> או השאירו את פרטיכם ואחד מנציגי השירות שלנו יחזור אליכם בהקדם האפשרי.</p>
         </article>
         <aside class="article-cover">
           <img src="assets/work-datacenter.png" alt="תשתיות תקשורת בשטח">
@@ -88,17 +88,18 @@
     <section class="svc-strip">
       <div class="wrap">
         <div class="svc-pills">
-          <a href="service.html?id=servers">ארונות שרתים</a>
-          <a href="service.html?id=cameras">מצלמות אבטחה</a>
-          <a href="service.html?id=fiber">סיבים אופטיים</a>
-          <a href="service.html?id=network">רשתות מחשבים</a>
-          <a href="service.html?id=telephony">טלפוניה</a>
-          <a href="service.html?id=lowvoltage">מתח נמוך</a>
+          <a href="ארונות-תקשורת/">ארונות שרתים</a>
+          <a href="מערכת-מצלמות-אבטחה/">מצלמות אבטחה</a>
+          <a href="סיבים-אופטיים/">סיבים אופטיים</a>
+          <a href="רשת-מחשבים-לחברות-ועסקים/">רשתות מחשבים</a>
+          <a href="תקשורת-טלפוניה/">טלפוניה</a>
+          <a href="מערכות-מתח-נמוך/">מתח נמוך</a>
         </div>
       </div>
     </section>
   </main>
   <div id="site-footer"></div>
+  <script src="js/urls.js"></script>
   <script src="js/chrome.js"></script>
   <script src="js/contact-form.js"></script>
   <script src="js/privacy-consent.js"></script>
@@ -109,7 +110,7 @@
     const pick = ["infra-upgrade", "optical-renewal", "cabinet-renewal"]
       .map(id => all.find(a => a.id === id)).filter(Boolean);
     document.getElementById("related-grid").innerHTML = pick.map(r => `
-      <a class="article" href="article.html?id=${r.id}">
+      <a class="article" href="${(window.asherHref && window.asherHref.article(r.id)) || ("article.html?id=" + r.id)}">
         <img src="${r.img}" alt="">
         <div class="article-body">
           <span>${r.tag}</span>

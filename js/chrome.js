@@ -1,6 +1,6 @@
 (function () {
   const active = document.body.dataset.nav || "";
-  const contactHref = document.body.dataset.contact === "local" ? "#contact" : "index.html#contact";
+  const contactHref = document.body.dataset.contact === "local" ? "#contact" : "צור-קשר/";
   const header = document.getElementById("site-header");
   const footer = document.getElementById("site-footer");
   window.ASHER_CONTACT_HTML = `
@@ -69,7 +69,7 @@
       </button>
       <nav class="links" id="site-nav" aria-label="ניווט ראשי">
         <a href="index.html#services">השירותים שלנו</a>
-        <a class="${active === "about" ? "is-active" : ""}" href="about.html">אודות</a>
+        <a class="${active === "about" ? "is-active" : ""}" href="פרופיל-חברה/">אודות</a>
         <a class="${active === "articles" ? "is-active" : ""}" href="articles.html">מאמרים</a>
         <a href="${contactHref}">צור קשר</a>
       </nav>
@@ -98,7 +98,7 @@
           <summary>תפריט ראשי</summary>
           <ul>
             <li><a href="index.html">עמוד הבית</a></li>
-            <li><a href="about.html">פרופיל החברה</a></li>
+            <li><a href="פרופיל-חברה/">פרופיל החברה</a></li>
             <li><a href="index.html#services">שירותי החברה</a></li>
             <li><a href="articles.html">מאמרים</a></li>
             <li><a href="${contactHref}">צור קשר</a></li>
@@ -107,43 +107,43 @@
         <details open>
           <summary>השירותים שלנו</summary>
           <ul>
-            <li><a href="service.html?id=cameras">מערכת מצלמות אבטחה</a></li>
-            <li><a href="service.html?id=servers">ארונות תקשורת</a></li>
-            <li><a href="article.html?id=wifi-guide">אינטרנט אלחוטי ביתי</a></li>
-            <li><a href="service.html?id=lowvoltage">מערכות מתח נמוך</a></li>
-            <li><a href="service.html?id=network">רשת מחשבים לחברות ועסקים</a></li>
-            <li><a href="service.html?id=fiber">סיבים אופטיים</a></li>
-            <li><a href="service.html?id=optical">תקשורת אופטית</a></li>
-            <li><a href="service.html?id=computers">תקשורת מחשבים</a></li>
-            <li><a href="service.html?id=telephony">תקשורת טלפוניה</a></li>
-            <li><a href="service.html?id=telephony">תשתית תקשורת טלפוניה</a></li>
+            <li><a href="מערכת-מצלמות-אבטחה/">מערכת מצלמות אבטחה</a></li>
+            <li><a href="ארונות-תקשורת/">ארונות תקשורת</a></li>
+            <li><a href="המדריך-לשיפור-ה-wifi-בבית/">אינטרנט אלחוטי ביתי</a></li>
+            <li><a href="מערכות-מתח-נמוך/">מערכות מתח נמוך</a></li>
+            <li><a href="רשת-מחשבים-לחברות-ועסקים/">רשת מחשבים לחברות ועסקים</a></li>
+            <li><a href="סיבים-אופטיים/">סיבים אופטיים</a></li>
+            <li><a href="תקשורת-אופטית/">תקשורת אופטית</a></li>
+            <li><a href="תקשורת-מחשבים/">תקשורת מחשבים</a></li>
+            <li><a href="תקשורת-טלפוניה/">תקשורת טלפוניה</a></li>
+            <li><a href="תשתית-תקשורת-טלפונים-לעסקים-גדולים/">תשתית תקשורת טלפוניה</a></li>
           </ul>
         </details>
         <details open>
           <summary>קטגוריות ראשיות</summary>
           <ul>
-            <li><a href="article.html?id=internet-business">אינטרנט לעסקים</a></li>
-            <li><a href="article.html?id=computer-rooms">תכנון חדרי מחשב</a></li>
-            <li><a href="article.html?id=comm-faults">תיקון תקלות תקשורת</a></li>
-            <li><a href="article.html?id=fiber-tech">טכנאי סיבים אופטיים</a></li>
-            <li><a href="article.html?id=telephony-infra">תשתית תקשורת טלפונית למוסדות</a></li>
-            <li><a href="article.html?id=comm-accessories">אביזרי תקשורת</a></li>
-            <li><a href="article.html?id=infra-maintenance">אחזקת תשתיות תקשורת</a></li>
-            <li><a href="article.html?id=fiber-internet">אינטרנט סיבים</a></li>
+            <li><a href="אינטרנט-לעסקים/">אינטרנט לעסקים</a></li>
+            <li><a href="תכנון-חדרי-מחשב/">תכנון חדרי מחשב</a></li>
+            <li><a href="תיקון-תקלות-תקשורת/">תיקון תקלות תקשורת</a></li>
+            <li><a href="טכנאי-סיבים-אופטיים/">טכנאי סיבים אופטיים</a></li>
+            <li><a href="תשתית-תקשורת-טלפונים-לעסקים-גדולים/">תשתית תקשורת טלפונית למוסדות</a></li>
+            <li><a href="אביזרי-תקשורת/">אביזרי תקשורת</a></li>
+            <li><a href="אחזקת-תשתיות-תקשורת/">אחזקת תשתיות תקשורת</a></li>
+            <li><a href="כיצד-אינטרנט-עם-סיב-אופטי-ישפר-את-העבוד/">אינטרנט סיבים</a></li>
           </ul>
         </details>
         <details open>
           <summary>מאמרים רלוונטיים</summary>
           <ul>
-            <li><a href="article.html?id=internet-infra">התקנת תשתית אינטרנט</a></li>
-            <li><a href="article.html?id=computer-issues">הטיפול בבעיות מחשבים</a></li>
-            <li><a href="article.html?id=wifi-guide">המדריך לשיפור ה-WIFI בבית</a></li>
-            <li><a href="article.html?id=security-cameras">התקנת מצלמות אבטחה</a></li>
-            <li><a href="article.html?id=optical-renewal">חידוש תשתיות אופטיות</a></li>
-            <li><a href="article.html?id=comm-control">מערכות תקשורת ובקרה</a></li>
-            <li><a href="article.html?id=cabinet-renewal">סידור וחידוש ארונות תקשורת</a></li>
-            <li><a href="article.html?id=fiber-equipment">ציוד לסיבים אופטיים</a></li>
-            <li><a href="article.html?id=infra-upgrade">שדרוג תשתיות תקשורת</a></li>
+            <li><a href="התקנת-תשתית-אינטרנט/">התקנת תשתית אינטרנט</a></li>
+            <li><a href="הטיפול-בבעיות-מחשבים/">הטיפול בבעיות מחשבים</a></li>
+            <li><a href="המדריך-לשיפור-ה-wifi-בבית/">המדריך לשיפור ה-WIFI בבית</a></li>
+            <li><a href="התקנת-מצלמות-אבטחה/">התקנת מצלמות אבטחה</a></li>
+            <li><a href="חידוש-תשתיות-אופטיות/">חידוש תשתיות אופטיות</a></li>
+            <li><a href="מערכות-תקשורת-ובקרה/">מערכות תקשורת ובקרה</a></li>
+            <li><a href="סידור-וחידוש-ארונות-תקשורת/">סידור וחידוש ארונות תקשורת</a></li>
+            <li><a href="ציוד-לסיבים-אופטיים/">ציוד לסיבים אופטיים</a></li>
+            <li><a href="שדרוג-תשתיות-תקשורת/">שדרוג תשתיות תקשורת</a></li>
           </ul>
         </details>
         <div class="foot-contact">

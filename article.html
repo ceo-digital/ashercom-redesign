@@ -14,6 +14,7 @@
   <div id="site-header"></div>
   <main id="main"></main>
   <div id="site-footer"></div>
+  <script src="js/urls.js"></script>
   <script src="js/chrome.js"></script>
   <script src="js/contact-form.js"></script>
   <script src="js/privacy-consent.js"></script>
@@ -25,8 +26,10 @@
     const all = window.ASHER_ARTICLES || [];
     const article = all.find(a => a.id === id) || all[0];
     const related = (article.related || []).map(rid => all.find(a => a.id === rid)).filter(Boolean).slice(0, 3);
+    const hrefA = (window.asherHref && window.asherHref.article) || (x => "article.html?id=" + x);
+    const rewrite = (window.asherHref && window.asherHref.rewrite) || (x => x);
     document.title = article.title + " — אשר תקשורת";
-    document.getElementById("main").innerHTML = `
+    document.getElementById("main").innerHTML = rewrite(`
       <section class="article-hero">
         <div class="wrap">
           <div class="crumbs">
@@ -54,7 +57,7 @@
           <h2>עוד לקריאה</h2>
           <div class="related-grid">
             ${related.map(r => `
-              <a class="article" href="article.html?id=${r.id}">
+              <a class="article" href="${hrefA(r.id)}">
                 <img src="${r.img}" alt="">
                 <div class="article-body">
                   <span>${r.tag}</span>
@@ -66,7 +69,7 @@
         </div>
       </section>
       ${window.ASHER_CONTACT_HTML || ""}
-    `;
+    `);
   </script>
 </body>
 </html>

@@ -27,6 +27,7 @@
     <div id="contact-slot"></div>
   </main>
   <div id="site-footer"></div>
+  <script src="js/urls.js"></script>
   <script src="js/chrome.js"></script>
   <script src="js/contact-form.js"></script>
   <script src="js/privacy-consent.js"></script>
@@ -36,7 +37,7 @@
     const all = window.ASHER_ARTICLES || [];
     const [lead, ...rest] = all;
     document.getElementById("lead").innerHTML = `
-      <a class="lead-card" href="article.html?id=${lead.id}">
+      <a class="lead-card" href="${(window.asherHref && window.asherHref.article(lead.id)) || ("article.html?id=" + lead.id)}">
         <div class="lead-copy">
           <span>${lead.tag} · ${lead.read}</span>
           <h2>${lead.title}</h2>
@@ -45,7 +46,7 @@
         <img src="${lead.img}" alt="">
       </a>`;
     document.getElementById("grid").innerHTML = rest.map(a => `
-      <a class="article" href="article.html?id=${a.id}">
+      <a class="article" href="${(window.asherHref && window.asherHref.article(a.id)) || ("article.html?id=" + a.id)}">
         <img src="${a.img}" alt="">
         <div class="article-body">
           <span>${a.tag}</span>
