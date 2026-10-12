@@ -551,6 +551,14 @@
       stroke-dasharray: 6 12; animation: orbitDash 9s linear infinite;
     }
     .orbit-spark { filter: drop-shadow(0 0 5px currentColor); }
+    .foot-logo-mark {
+      position: relative; z-index: 1;
+      display: inline-flex; align-items: center; justify-content: center;
+    }
+    .foot-logo-mark .logo-anim {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      pointer-events: none; overflow: visible; display: block;
+    }
     .foot-logo .brand-end {
       position: relative; z-index: 1;
       height: 128px; width: auto; max-width: min(72vw, 560px);
@@ -981,35 +989,23 @@
       }
       .foot-cols details ul { padding: 0 2px 14px; }
       .foot-contact { padding-top: 18px; }
+      .foot-inner { padding-bottom: 168px; }
       .foot-brand {
-        order: -1;
         justify-content: center;
-        margin-top: 0;
-        margin-bottom: 8px;
+        margin-top: 36px;
+        margin-bottom: 0;
       }
-      .foot-logo .brand-end { height: 88px; max-width: min(82vw, 360px); }
-      .foot-logo { padding: 16px 18px; }
-      .foot-logo-aura { inset: -12px; }
-      .foot-brand.is-mid {
-        justify-content: center;
-        background: var(--hero);
-        margin: 0;
-        padding: 22px 12px 28px;
+      .foot-logo {
+        padding: 18px 8px 12px;
         width: 100%;
-        max-width: 100%;
-        overflow: hidden;
-      }
-      .foot-brand.is-mid .foot-logo {
-        padding: 10px 4px;
-        width: 100%;
-        display: flex;
         justify-content: center;
       }
-      .foot-brand.is-mid .brand-end {
-        height: clamp(88px, 22vw, 128px);
-        max-width: min(92vw, 480px);
-        width: auto;
+      .foot-logo .brand-end {
+        height: clamp(88px, 24vw, 120px);
+        max-width: min(86vw, 420px);
       }
+      .foot-logo-aura { inset: -10px; }
+      .foot-logo .logo-anim { display: block; }
 
       .process { padding: 24px 0 20px; }
       .steps {

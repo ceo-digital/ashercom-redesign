@@ -172,7 +172,28 @@
               <animateMotion dur="5.2s" begin="-2.6s" repeatCount="indefinite" path="M14 2 H186 A12 12 0 0 1 198 14 V42 A12 12 0 0 1 186 54 H14 A12 12 0 0 1 2 42 V14 A12 12 0 0 1 14 2 Z"/>
             </circle>
           </svg>
-          <img class="brand-end" src="assets/logo-asher.png" alt="אשר תקשורת">
+          <span class="foot-logo-mark">
+            <img class="brand-end" src="assets/logo-asher.png" alt="אשר תקשורת">
+            <svg class="logo-anim" viewBox="0 0 1024 271" aria-hidden="true">
+              <defs>
+                <filter id="footDotGlow" x="-80%" y="-80%" width="260%" height="260%">
+                  <feGaussianBlur stdDeviation="3.2" result="b"/>
+                  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+              <path id="footLogoTrack" fill="none" d="M70 168 H155 V78 M155 168 L48 168 M155 78 L155 42 M870 48 V222 M870 132 H960 M870 48 L870 28"/>
+              <circle r="5.5" fill="#7AD7FF" filter="url(#footDotGlow)">
+                <animateMotion dur="4.6s" repeatCount="indefinite" rotate="auto">
+                  <mpath href="#footLogoTrack"/>
+                </animateMotion>
+              </circle>
+              <circle r="2.4" fill="#F0C419">
+                <animateMotion dur="4.6s" begin="0.35s" repeatCount="indefinite">
+                  <mpath href="#footLogoTrack"/>
+                </animateMotion>
+              </circle>
+            </svg>
+          </span>
         </a>
       </div>
     </div>
