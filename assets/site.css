@@ -714,19 +714,6 @@
     }
     html.a11y-contrast a { text-decoration: underline; }
 
-    .palette-switch {
-      position: fixed; right: 22px; bottom: 22px; z-index: 80;
-      background: var(--cream); border: 1px solid var(--line); border-radius: 14px;
-      padding: 10px; width: 186px; box-shadow: 0 12px 28px rgba(0,0,0,.12);
-    }
-    .palette-switch span { display: block; font-size: 11px; color: var(--muted); margin-bottom: 8px; }
-    .palette-switch button {
-      width: 100%; text-align: right; border: 1px solid var(--line); background: transparent;
-      padding: 8px 10px; border-radius: 9px; margin-bottom: 5px; cursor: pointer;
-      font-size: 13px; font-weight: 600; color: var(--ink);
-    }
-    .palette-switch button.is-on { border-color: var(--accent); background: var(--accent-soft); }
-
     @media (max-width: 1100px) {
       .mast { min-height: 92px; gap: 20px 24px; }
       .brand { height: 64px; width: 242px; }
@@ -1075,7 +1062,6 @@
       #articles .articles { order: 2; }
       #articles .sec-head p { order: 3; margin: 14px 0 0; text-align: center; max-width: none; }
 
-      .palette-switch { display: none; }
       .float-btns {
         left: max(14px, env(safe-area-inset-left));
         bottom: max(18px, env(safe-area-inset-bottom));

@@ -37,7 +37,7 @@
               </div>
               <label class="consent-check">
                 <input type="checkbox" name="privacy_consent" value="yes" required>
-                <span>מסירת הפרטים אינה חובה חוקית. אי־הסכמה תמנע שליחת הפנייה. קראתי את <a href="privacy.html">מדיניות הפרטיות</a> ואני מסכים/ה לעיבוד פרטיי לצורך טיפול בפנייה בלבד.</span>
+                <span>קראתי את <a href="privacy.html">מדיניות הפרטיות</a> ואני מסכים/ה לעיבוד פרטיי לצורך טיפול בפנייה בלבד.</span>
               </label>
               <button class="btn btn-fill" type="submit" style="width:max-content">שליחת פנייה</button>
             </div>
@@ -76,7 +76,7 @@
       <div class="mast-end">
         <a class="mast-phone" href="tel:1700505616">1-700-505-616</a>
         <div class="socials">
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="פייסבוק — נפתח בחלון חדש">
+          <a href="https://www.facebook.com/profile.php?id=100075842472250" target="_blank" rel="noopener noreferrer" aria-label="פייסבוק — נפתח בחלון חדש">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h3l1-3h-4V10c0-.6.4-1 1-1z"/></svg>
           </a>
         </div>
@@ -177,11 +177,6 @@
       </div>
     </div>
   </footer>
-  <aside class="palette-switch" aria-label="השוואת פלטות">
-    <span>פלטה — נסו</span>
-    <button class="is-on" type="button" onclick="setPalette('server', this)">נייבי · מהתמונה</button>
-    <button type="button" onclick="setPalette('signal', this)">סיגנל · בהיר</button>
-  </aside>
   <div class="float-btns">
     <div style="position:relative">
       <div class="a11y-panel" id="a11y" hidden></div>
@@ -192,14 +187,10 @@
         </svg>
       </button>
     </div>
-    <a class="wa" href="https://wa.me/972507228900" target="_blank" rel="noopener noreferrer" aria-label="וואטסאפ — נפתח בחלון חדש">
+    <a class="wa" href="https://wa.me/972507228900" target="_blank" rel="noopener noreferrer" aria-label="וואטסאפ אשר תקשורת 050-722-8900 — נפתח בחלון חדש">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 2.1 17.8L1 23l5.3-1.1A11 11 0 0 0 12 23a11 11 0 0 0 8.5-19.5zM12 21a9 9 0 0 1-4.6-1.3l-.3-.2-3.1.7.7-3-.2-.3A9 9 0 1 1 12 21zm5-6.7c-.3-.1-1.6-.8-1.8-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6.1a7.4 7.4 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5.1-.2a.5.5 0 0 0 0-.5c0-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4.1 5.3 5.3 0 0 0 3 .8 2.6 2.6 0 0 0 1.7-.8 2.1 2.1 0 0 0 .5-1.5c0-.2 0-.3-.2-.4z"/></svg>
     </a>
   </div>`;
-  window.setPalette = function (theme, btn) {
-    document.body.setAttribute("data-theme", theme);
-    document.querySelectorAll(".palette-switch button").forEach(b => b.classList.toggle("is-on", b === btn));
-  };
   document.querySelectorAll(".foot-logo").forEach((el) => {
     el.addEventListener("pointermove", (e) => {
       const r = el.getBoundingClientRect();
