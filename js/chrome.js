@@ -249,4 +249,21 @@
       });
     });
   })();
+  if (!document.getElementById("org-schema")) {
+    const schema = document.createElement("script");
+    schema.id = "org-schema";
+    schema.type = "application/ld+json";
+    schema.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "אשר תקשורת",
+      "url": "https://ashercom.com/",
+      "telephone": "+972-1700-505-616",
+      "email": "asher@ashercom.com",
+      "areaServed": "IL",
+      "image": "https://ashercom.com/assets/logo-asher.png",
+      "sameAs": ["https://www.facebook.com/profile.php?id=100075842472250"]
+    });
+    document.head.appendChild(schema);
+  }
 })();

@@ -7,6 +7,47 @@
   const page = document.body.dataset.page || "";
   const id = document.body.dataset.id || "";
 
+  function pageSlug() {
+    const parts = decodeURIComponent(location.pathname.replace(/\/+$/, "")).split("/");
+    const last = parts[parts.length - 1] || "";
+    if (!last || last === "ashercom-redesign" || /\.html$/i.test(last)) return "";
+    return last;
+  }
+  function absCanon(slug) {
+    return slug ? "https://ashercom.com/" + slug + "/" : "https://ashercom.com/";
+  }
+  function setSeo(title, desc, slug) {
+    const current = document.title || "";
+    if (!current || current === "אשר תקשורת" || current === "מאמר — אשר תקשורת") {
+      document.title = title;
+    }
+    let meta = document.querySelector('meta[name="description"]');
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute("name", "description");
+      document.head.appendChild(meta);
+    }
+    if (desc && !meta.getAttribute("content")) meta.setAttribute("content", desc);
+    let link = document.querySelector('link[rel="canonical"]');
+    if (!link) {
+      link = document.createElement("link");
+      link.rel = "canonical";
+      document.head.appendChild(link);
+    }
+    if (link.getAttribute("href") && link.getAttribute("href").indexOf("https://ashercom.com") === 0) return;
+    link.href = absCanon(slug);
+  }
+  function setJsonLd(data) {
+    let el = document.getElementById("page-schema");
+    if (!el) {
+      el = document.createElement("script");
+      el.id = "page-schema";
+      el.type = "application/ld+json";
+      document.head.appendChild(el);
+    }
+    el.textContent = JSON.stringify(data);
+  }
+
   function renderArticle(item, relatedKind) {
     const all = relatedKind === "service" ? (window.ASHER_SERVICES || []) : (window.ASHER_ARTICLES || []);
     const related = (item.related || []).map(function (rid) { return all.find(function (x) { return x.id === rid; }); }).filter(Boolean).slice(0, 3);
@@ -14,7 +55,18 @@
     const crumbsMid = relatedKind === "service"
       ? '<a href="index.html#services">שירותים</a>'
       : '<a href="articles.html">מאמרים</a>';
-    document.title = item.title + " — אשר תקשורת";
+    const title = item.title + " — אשר תקשורת";
+    setSeo(title, item.dek, pageSlug());
+    setJsonLd({
+      "@context": "https://schema.org",
+      "@type": relatedKind === "service" ? "Service" : "Article",
+      "headline": item.title,
+      "name": item.title,
+      "description": item.dek,
+      "inLanguage": "he",
+      "url": absCanon(pageSlug()),
+      "provider": { "@type": "LocalBusiness", "name": "אשר תקשורת", "telephone": "+972-1700-505-616" }
+    });
     document.getElementById("main").innerHTML = href.rewrite(`
       <section class="article-hero">
         <div class="wrap">
@@ -70,12 +122,12 @@
     return;
   }
   if (page === "contact") {
-    document.title = "צור קשר — אשר תקשורת";
+    setSeo("צור קשר — אשר תקשורת", "צור קשר עם אשר תקשורת: 1-700-505-616, asher@ashercom.com.", "צור-קשר");
     document.getElementById("main").innerHTML = window.ASHER_CONTACT_HTML || "";
     return;
   }
   if (page === "home-alias") {
-    document.title = "אשר תקשורת — תשתיות תקשורת לעסקים";
+    setSeo("אשר תקשורת — תשתיות תקשורת לעסקים", "קבלן תשתיות תקשורת בפריסה ארצית. סיבים אופטיים, רשתות מחשבים, טלפוניה ומערכות מתח נמוך.", "");
     document.getElementById("main").innerHTML = `
       <section class="article-hero">
         <div class="wrap">
