@@ -320,6 +320,19 @@
     section { padding: 40px 0; }
     .sec-kicker { color: var(--accent-deep); font-size: 13px; font-weight: 600; margin-bottom: 8px; }
     h2 { font-size: clamp(1.7rem, 3vw, 2.5rem); line-height: 1.2; letter-spacing: -0.02em; max-width: 16ch; }
+    .rank-copy {
+      background: var(--cream);
+      padding: 40px 0;
+      border-block: 1px solid var(--line);
+    }
+    .rank-copy h2 {
+      max-width: none;
+      font-size: 1.2rem;
+      letter-spacing: 0;
+      margin: 0 0 8px;
+    }
+    .rank-copy h2 + p { margin: 0 0 22px; color: var(--muted); font-size: 15px; line-height: 1.75; max-width: 68ch; }
+    .rank-copy p:last-child { margin-bottom: 0; }
     .sec-head { display: flex; justify-content: flex-start; align-items: end; gap: 24px; margin-bottom: 28px; text-align: right; }
     .sec-head p { max-width: 42ch; color: var(--muted); }
     .title-xl {
@@ -1204,11 +1217,12 @@
       <div class="hero-grid-lines"></div>
       <div class="wrap hero-grid">
         <div>
+          <div class="eyebrow" data-i18n="hero.kicker">קבלן תשתיות תקשורת</div>
           <h1>
             <span class="line-wrap"><span class="line" data-i18n="hero.line1">העוגן הטכנולוגי</span></span>
             <span class="line-wrap"><span class="line" data-i18n="hero.line2">מאחורי הארגונים המובילים</span></span>
           </h1>
-          <p class="lead" data-i18n="hero.lead">סיבים אופטיים, רשתות, טלפוניה ומערכות מתח נמוך — תכנון, התקנה ופיקוח לעסקים ולמוסדות, בפריסה ארצית.</p>
+          <p class="lead" data-i18n="hero.lead">תשתיות תקשורת לעסקים: סיבים אופטיים, רשתות, טלפוניה ומערכות מתח נמוך — תכנון, התקנה ופיקוח בפריסה ארצית.</p>
           <div class="hero-actions">
             <a class="btn btn-copper" href="#contact" data-i18n="cta.details">השאירו פרטים</a>
             <a class="btn btn-ghost" href="#services" data-i18n="cta.services">השירותים שלנו</a>
@@ -1423,6 +1437,17 @@
             </div>
           </a>
         </div>
+      </div>
+    </section>
+
+    <section class="rank-copy" id="infra">
+      <div class="wrap">
+        <h2 data-i18n="rank.infra.h">תשתיות תקשורת</h2>
+        <p data-i18n="rank.infra.p">חברתנו עוסקת במתן פתרונות תקשורת בתחום סיבים אופטיים, טלפוניה, מחשבים, כריזה ומערכות מתח נמוך. אשר תקשורת מספקת שירות בפריסה ארצית — ייעוץ, תכנון, ביצוע ופיקוח.</p>
+        <h2 data-i18n="rank.contractor.h">קבלן תשתיות תקשורת</h2>
+        <p data-i18n="rank.contractor.p">בין אם אתם מתכננים משרד, מבנה או אתר פעיל, תשתיות התקשורת מחייבות תכנון והתקנה מקצועיים. עם קבלן תשתיות תקשורת אפשר להגדיר את הצרכים, לשרטט את התוואי ולבצע התקנה של הרשת, הטלפוניה, המחשבים והחיבור לאינטרנט. אשר תקשורת מעניקה ייעוץ והקמה של התשתיות הדרושות לעבודה התקינה של העסק.</p>
+        <h2 data-i18n="rank.biz.h">תשתיות תקשורת לעסקים</h2>
+        <p data-i18n="rank.biz.p">תשתיות תקשורת לעסקים נבנות לפי גודל הארגון ומספר העמדות. העסק נשען על תקשורת יציבה — מחשבים, אינטרנט ורשת פנימית. אשר תקשורת מתכננת ומקימה את התשתית לפי צורכי העסק, כולל חשיבה קדימה לשדרוגים.</p>
       </div>
     </section>
 

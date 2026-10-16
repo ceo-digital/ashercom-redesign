@@ -83,8 +83,8 @@ const canon = {
 
 const seo = {
   "מערכות-מתח-נמוך": ["מערכות מתח נמוך — אשר תקשורת", "תכנון והתקנת מערכות מתח נמוך: כריזה, מצלמות IP ובקרת כניסה. אשר תקשורת בפריסה ארצית."],
-  "סיבים-אופטיים": ["סיבים אופטיים — התקנה וקבלן סיבים אופטיים", "התקנת סיבים אופטיים וקבלן סיבים אופטיים לעסקים: תכנון, היתוך, מדידות OTDR ומסירה."],
-  "תקשורת-מחשבים": ["תקשורת מחשבים — תשתיות תקשורת מחשבים", "תשתיות תקשורת מחשבים והקמת תשתית תקשורת: CAT6A, חדרי מחשב ומסדים לפי צורכי העסק."],
+  "סיבים-אופטיים": ["סיבים אופטיים — התקנת כבל סיב אופטי וקבלן סיבים", "התקנת סיבים אופטיים וקבלן סיבים אופטיים: כבל סיב אופטי, תשתית סיבים אופטיים ומדידות OTDR."],
+  "תקשורת-מחשבים": ["תקשורת מחשבים — תשתיות ורשתות תקשורת מחשבים", "תשתיות תקשורת מחשבים, רשתות תקשורת מחשבים והקמת תשתית תקשורת: CAT6A, חדרי מחשב ומסדים."],
   "תקשורת-אופטית": ["תקשורת אופטית — אשר תקשורת", "תקשורת אופטית לעסקים: משדר, תווך ומקלט על בסיס אור. תכנון והתקנה בפריסה ארצית."],
   "התקנת-תשתית-אינטרנט": ["התקנת תשתית אינטרנט — אשר תקשורת", "התקנת תשתית אינטרנט לעסק ולבית: נתב, מתג, נקודות קצה וליווי מקצועי."],
   "אינטרנט-לעסקים": ["אינטרנט לעסקים — אינטרנט עסקי", "אינטרנט לעסקים ואינטרנט עסקי: אפיון תשתית, חיבור יציב, אבטחה ותחזוקה."],
@@ -154,6 +154,18 @@ function seoFor(slug, info) {
   };
 }
 
+function loadWindowArray(file, globalName) {
+  const src = fs.readFileSync(path.join(root, file), "utf8");
+  return new Function(`${src.replace("window." + globalName, "const " + globalName)}; return ${globalName};`)();
+}
+const articles = loadWindowArray("js/articles-data.js", "ASHER_ARTICLES");
+const services = loadWindowArray("js/services-data.js", "ASHER_SERVICES");
+function itemFor(info) {
+  if (info.page === "article") return articles.find((a) => a.id === info.id);
+  if (info.page === "service") return services.find((a) => a.id === info.id);
+  return null;
+}
+
 function pageHtml(slug, info, canonicalHref, title, desc) {
   const nav = info.page === "article" ? "articles" : info.page === "about" ? "about" : "";
   const extra = info.page === "service"
@@ -163,11 +175,18 @@ function pageHtml(slug, info, canonicalHref, title, desc) {
       : `  <script src="js/pretty-page.js"></script>`;
   const idAttr = info.id ? ` data-id="${info.id}"` : "";
   const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+  const item = itemFor(info);
+  const selfCanon = canonicalHref === HOST + "/" + slug + "/";
+  const crawlBody = (selfCanon && item)
+    ? `<div class="seo-seed"><h1>${esc(item.title)}</h1><article class="prose">${item.body}</article></div>`
+    : `<noscript><h1>${esc(title)}</h1><p>${esc(desc)}</p></noscript>`;
   return `<!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add("has-js")</script>
+  <style>.has-js .seo-seed{display:none}</style>
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(desc)}">
   <base href="../">
@@ -186,7 +205,7 @@ function pageHtml(slug, info, canonicalHref, title, desc) {
 <body data-theme="server" data-nav="${nav}" data-contact="local" data-page="${info.page}"${idAttr}>
   <div id="site-header"></div>
   <main id="main" tabindex="-1">
-    <noscript><h1>${esc(title)}</h1><p>${esc(desc)}</p></noscript>
+    ${crawlBody}
   </main>
   <div id="site-footer"></div>
   <script src="js/urls.js"></script>
