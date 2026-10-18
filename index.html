@@ -327,14 +327,18 @@
     }
     .rank-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px 36px;
-      align-items: start;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      align-items: stretch;
     }
     .rank-item {
       min-width: 0;
-      padding-top: 14px;
-      border-top: 2px solid var(--accent);
+      height: 100%;
+      padding: 22px 20px 24px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--accent);
+      border-radius: 16px;
     }
     .rank-copy h2 {
       max-width: none;
@@ -349,6 +353,9 @@
       font-size: 15px;
       line-height: 1.75;
       max-width: none;
+    }
+    @media (min-width: 901px) {
+      .rank-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     }
     .sec-head { display: flex; justify-content: flex-start; align-items: end; gap: 24px; margin-bottom: 28px; text-align: right; }
     .sec-head p { max-width: 42ch; color: var(--muted); }
