@@ -52,6 +52,28 @@
     const all = relatedKind === "service" ? (window.ASHER_SERVICES || []) : (window.ASHER_ARTICLES || []);
     const related = (item.related || []).map(function (rid) { return all.find(function (x) { return x.id === rid; }); }).filter(Boolean).slice(0, 3);
     const listHref = relatedKind === "service" ? href.service : href.article;
+    const metaLine = item.read ? item.read + " · אשר תקשורת" : "אשר תקשורת";
+    const cover = item.img
+      ? `<aside class="article-cover"><img src="${item.img}" alt="${item.title}"></aside>`
+      : "";
+    const relatedHtml = related.length ? `
+      <section class="related">
+        <div class="wrap">
+          <h2>עוד לקריאה</h2>
+          <div class="related-grid">
+            ${related.map(function (r) {
+              return `<a class="article" href="${listHref(r.id)}">
+                <img src="${r.img}" alt="">
+                <div class="article-body">
+                  <span>${r.tag}</span>
+                  <h3>${r.title}</h3>
+                  <p>${r.dek}</p>
+                </div>
+              </a>`;
+            }).join("")}
+          </div>
+        </div>
+      </section>` : "";
     const crumbsMid = relatedKind === "service"
       ? '<a href="index.html#services">שירותים</a>'
       : '<a href="articles.html">מאמרים</a>';
@@ -74,41 +96,40 @@
             <a href="index.html">בית</a>
             <span>·</span>
             ${crumbsMid}
-            <span>·</span>
-            <span>${item.tag}</span>
+            ${item.tag && item.tag !== "מאמרים" ? `<span>·</span><span>${item.tag}</span>` : ""}
           </div>
           <div class="article-kicker">${item.tag}</div>
           <h1>${item.title}</h1>
-          <p class="meta">${item.read} · אשר תקשורת</p>
+          <p class="meta">${metaLine}</p>
         </div>
       </section>
       <section class="article-body-band">
         <div class="wrap article-layout">
           <article class="prose">${item.body}</article>
-          <aside class="article-cover">
-            <img src="${item.img}" alt="${item.title}">
-          </aside>
+          ${cover}
         </div>
       </section>
-      <section class="related">
-        <div class="wrap">
-          <h2>עוד לקריאה</h2>
-          <div class="related-grid">
-            ${related.map(function (r) {
-              return `<a class="article" href="${listHref(r.id)}">
-                <img src="${r.img}" alt="">
-                <div class="article-body">
-                  <span>${r.tag}</span>
-                  <h3>${r.title}</h3>
-                  <p>${r.dek}</p>
-                </div>
-              </a>`;
-            }).join("")}
-          </div>
-        </div>
-      </section>
+      ${relatedHtml}
       ${window.ASHER_CONTACT_HTML || ""}
     `);
+  }
+
+  if (page === "legacy") {
+    const seed = document.querySelector(".seo-seed");
+    if (!seed) return;
+    const h1 = seed.querySelector("h1");
+    const prose = seed.querySelector(".prose");
+    const img = prose && prose.querySelector("img");
+    renderArticle({
+      title: h1 ? h1.textContent.trim() : document.title,
+      tag: seed.getAttribute("data-tag") || "מאמר",
+      read: "",
+      img: img ? img.getAttribute("src") : "assets/work-datacenter.png",
+      dek: "",
+      body: prose ? prose.innerHTML : "",
+      related: []
+    }, "article");
+    return;
   }
 
   if (page === "article") {
