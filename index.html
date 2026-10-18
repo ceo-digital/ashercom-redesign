@@ -322,17 +322,34 @@
     h2 { font-size: clamp(1.7rem, 3vw, 2.5rem); line-height: 1.2; letter-spacing: -0.02em; max-width: 16ch; }
     .rank-copy {
       background: var(--cream);
-      padding: 40px 0;
+      padding: 48px 0;
       border-block: 1px solid var(--line);
+    }
+    .rank-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px 36px;
+      align-items: start;
+    }
+    .rank-item {
+      min-width: 0;
+      padding-top: 14px;
+      border-top: 2px solid var(--accent);
     }
     .rank-copy h2 {
       max-width: none;
-      font-size: 1.2rem;
-      letter-spacing: 0;
-      margin: 0 0 8px;
+      font-size: clamp(1.15rem, 1.5vw, 1.35rem);
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+      margin: 0 0 12px;
     }
-    .rank-copy h2 + p { margin: 0 0 22px; color: var(--muted); font-size: 15px; line-height: 1.75; max-width: 68ch; }
-    .rank-copy p:last-child { margin-bottom: 0; }
+    .rank-copy p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.75;
+      max-width: none;
+    }
     .sec-head { display: flex; justify-content: flex-start; align-items: end; gap: 24px; margin-bottom: 28px; text-align: right; }
     .sec-head p { max-width: 42ch; color: var(--muted); }
     .title-xl {
@@ -808,6 +825,8 @@
     @media (max-width: 900px) {
       .wrap { width: calc(100% - 28px); }
       section { padding: 28px 0; }
+      .rank-grid { grid-template-columns: 1fr; gap: 22px; }
+      .rank-copy { padding: 32px 0; }
       html { scroll-padding-top: 96px; }
       header.site {
         background: rgba(7, 20, 34, 0.94);
@@ -1441,13 +1460,19 @@
     </section>
 
     <section class="rank-copy" id="infra">
-      <div class="wrap">
-        <h2 data-i18n="rank.infra.h">תשתיות תקשורת</h2>
-        <p data-i18n="rank.infra.p">חברתנו עוסקת במתן פתרונות תקשורת בתחום סיבים אופטיים, טלפוניה, מחשבים, כריזה ומערכות מתח נמוך. אשר תקשורת מספקת שירות בפריסה ארצית — ייעוץ, תכנון, ביצוע ופיקוח.</p>
-        <h2 data-i18n="rank.contractor.h">קבלן תשתיות תקשורת</h2>
-        <p data-i18n="rank.contractor.p">בין אם אתם מתכננים משרד, מבנה או אתר פעיל, תשתיות התקשורת מחייבות תכנון והתקנה מקצועיים. עם קבלן תשתיות תקשורת אפשר להגדיר את הצרכים, לשרטט את התוואי ולבצע התקנה של הרשת, הטלפוניה, המחשבים והחיבור לאינטרנט. אשר תקשורת מעניקה ייעוץ והקמה של התשתיות הדרושות לעבודה התקינה של העסק.</p>
-        <h2 data-i18n="rank.biz.h">תשתיות תקשורת לעסקים</h2>
-        <p data-i18n="rank.biz.p">תשתיות תקשורת לעסקים נבנות לפי גודל הארגון ומספר העמדות. העסק נשען על תקשורת יציבה — מחשבים, אינטרנט ורשת פנימית. אשר תקשורת מתכננת ומקימה את התשתית לפי צורכי העסק, כולל חשיבה קדימה לשדרוגים.</p>
+      <div class="wrap rank-grid">
+        <article class="rank-item">
+          <h2 data-i18n="rank.infra.h">תשתיות תקשורת</h2>
+          <p data-i18n="rank.infra.p">חברתנו עוסקת במתן פתרונות תקשורת בתחום סיבים אופטיים, טלפוניה, מחשבים, כריזה ומערכות מתח נמוך. אשר תקשורת מספקת שירות בפריסה ארצית — ייעוץ, תכנון, ביצוע ופיקוח.</p>
+        </article>
+        <article class="rank-item">
+          <h2 data-i18n="rank.contractor.h">קבלן תשתיות תקשורת</h2>
+          <p data-i18n="rank.contractor.p">בין אם אתם מתכננים משרד, מבנה או אתר פעיל, תשתיות התקשורת מחייבות תכנון והתקנה מקצועיים. עם קבלן תשתיות תקשורת אפשר להגדיר את הצרכים, לשרטט את התוואי ולבצע התקנה של הרשת, הטלפוניה, המחשבים והחיבור לאינטרנט. אשר תקשורת מעניקה ייעוץ והקמה של התשתיות הדרושות לעבודה התקינה של העסק.</p>
+        </article>
+        <article class="rank-item">
+          <h2 data-i18n="rank.biz.h">תשתיות תקשורת לעסקים</h2>
+          <p data-i18n="rank.biz.p">תשתיות תקשורת לעסקים נבנות לפי גודל הארגון ומספר העמדות. העסק נשען על תקשורת יציבה — מחשבים, אינטרנט ורשת פנימית. אשר תקשורת מתכננת ומקימה את התשתית לפי צורכי העסק, כולל חשיבה קדימה לשדרוגים.</p>
+        </article>
       </div>
     </section>
 
