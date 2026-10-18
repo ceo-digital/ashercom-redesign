@@ -252,15 +252,17 @@
     }
     .eyebrow {
       display: inline-flex; align-items: center; gap: 10px;
-      color: var(--accent); font-size: 13px; font-weight: 500; margin-bottom: 22px;
+      color: var(--accent); font-size: 13px; font-weight: 500;
+      margin: 0 0 22px; line-height: 1.4; letter-spacing: 0; max-width: none;
     }
     .eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--accent); }
-    h1 {
+    .hero-title {
       font-size: clamp(2.1rem, 4.8vw, 3.7rem);
       font-weight: 700; line-height: 1.12; letter-spacing: -0.03em; max-width: 14ch;
+      margin: 0;
     }
-    h1 .line-wrap { display: block; overflow: hidden; }
-    h1 .line { display: block; }
+    .hero-title .line-wrap { display: block; overflow: hidden; }
+    .hero-title .line { display: block; }
     .hero p.lead {
       margin-top: 22px; max-width: 38ch; font-size: 18px;
       color: var(--hero-muted); line-height: 1.7;
@@ -919,7 +921,7 @@
         gap: 24px;
         padding: 28px 0 20px;
       }
-      h1 { max-width: none; }
+      .hero-title { max-width: none; }
       .hero p.lead { max-width: none; font-size: 16px; margin-top: 16px; }
       .hero-orbit { width: min(260px, 72vw); }
       .hero-actions { gap: 10px; justify-content: center; width: 100%; }
@@ -1243,11 +1245,11 @@
       <div class="hero-grid-lines"></div>
       <div class="wrap hero-grid">
         <div>
-          <div class="eyebrow" data-i18n="hero.kicker">קבלן תשתיות תקשורת</div>
-          <h1>
+          <h1 class="eyebrow" data-i18n="hero.kicker">קבלן תשתיות תקשורת</h1>
+          <p class="hero-title">
             <span class="line-wrap"><span class="line" data-i18n="hero.line1">העוגן הטכנולוגי</span></span>
             <span class="line-wrap"><span class="line" data-i18n="hero.line2">מאחורי הארגונים המובילים</span></span>
-          </h1>
+          </p>
           <p class="lead" data-i18n="hero.lead">תשתיות תקשורת לעסקים: סיבים אופטיים, רשתות, טלפוניה ומערכות מתח נמוך — תכנון, התקנה ופיקוח בפריסה ארצית.</p>
           <div class="hero-actions">
             <a class="btn btn-copper" href="#contact" data-i18n="cta.details">השאירו פרטים</a>
@@ -1771,7 +1773,7 @@
         intro.from("nav.links a", { y: 14, opacity: 0, stagger: 0.07, duration: 0.5 })
           .from(".mast-phone, .socials a", { y: 10, opacity: 0, stagger: 0.06, duration: 0.45 }, 0.15);
       }
-      intro.from("h1 .line", { yPercent: 110, stagger: 0.12, duration: 0.85, ease: "power4.out" }, 0.1)
+      intro.from(".hero-title .line", { yPercent: 110, stagger: 0.12, duration: 0.85, ease: "power4.out" }, 0.1)
         .from(".hero .lead, .hero-actions", { y: 22, opacity: 0, stagger: 0.1, duration: 0.65 }, 0.45)
         .from(".hero-orbit", { scale: 0.88, opacity: 0, duration: 0.95 }, 0.2);
 
