@@ -67,6 +67,7 @@
     button, input, textarea, select { font-family: inherit; }
     .wrap { width: min(1180px, calc(100% - 48px)); margin-inline: auto; max-width: 100%; }
     main { overflow-x: clip; max-width: 100%; }
+    body[data-page] #main { min-height: 100vh; }
 
     .skip {
       position: absolute; right: 16px; top: -40px; background: var(--ink); color: #fff;
