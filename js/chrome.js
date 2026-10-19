@@ -266,4 +266,7 @@
     });
     document.head.appendChild(schema);
   }
+  const waPrefill = document.createElement("script");
+  waPrefill.src = "js/wa-prefill.js";
+  document.body.appendChild(waPrefill);
 })();
