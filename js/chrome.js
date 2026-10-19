@@ -47,7 +47,7 @@
               <p>נחזור אליכם בהקדם.</p>
             </div>
             <div class="contact-visual" aria-hidden="true">
-              <img class="contact-visual-bg" src="assets/contact-infra.png" alt="">
+              <img class="contact-visual-bg" loading="lazy" decoding="async" src="assets/contact-infra.webp" alt="">
               <img class="contact-visual-logo" src="assets/logo-asher.png" alt="">
             </div>
           </form>
@@ -91,7 +91,7 @@
   </header>`;
   if (footer) footer.innerHTML = `
   <footer class="site-end">
-    <img class="bg" src="assets/footer-innovation.png" alt="">
+    <img class="bg" loading="lazy" decoding="async" src="assets/footer-innovation.webp" alt="">
     <div class="foot-inner wrap">
       <nav class="foot-cols" aria-label="ניווט תחתון">
         <details open>

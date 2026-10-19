@@ -15,9 +15,8 @@
   <meta property="og:image" content="https://ashercom.com/wp-content/uploads/2019/12/logo.png">
   <meta property="og:url" content="https://ashercom.com/">
   <script type="application/ld+json" id="org-schema">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://ashercom.com/#organization","name":"אשר תקשורת","url":"https://ashercom.com/","description":"קבלן תשתיות תקשורת בפריסה ארצית: סיבים אופטיים, רשתות מחשבים, טלפוניה ומערכות מתח נמוך.","telephone":"1-700-505-616","email":"asher@ashercom.com","address":{"@type":"PostalAddress","streetAddress":"שד' ההסתדרות 158","addressLocality":"חיפה","addressCountry":"IL"},"areaServed":{"@type":"Country","name":"Israel"},"logo":{"@type":"ImageObject","@id":"https://ashercom.com/#logo","url":"https://ashercom.com/wp-content/uploads/2019/12/logo.png","contentUrl":"https://ashercom.com/wp-content/uploads/2019/12/logo.png","caption":"אשר תקשורת"},"image":{"@id":"https://ashercom.com/#logo"},"contactPoint":[{"@type":"ContactPoint","telephone":"1-700-505-616","contactType":"customer service","areaServed":"IL","availableLanguage":["he"]}],"sameAs":["https://www.facebook.com/profile.php?id=100075842472250"]},{"@type":"WebSite","@id":"https://ashercom.com/#website","url":"https://ashercom.com/","name":"אשר תקשורת","inLanguage":"he-IL","publisher":{"@id":"https://ashercom.com/#organization"}},{"@type":"WebPage","@id":"https://ashercom.com/","url":"https://ashercom.com/","name":"קבלן תשתיות תקשורת לעסקים המציע פתרונות תקשורת - אשר תקשורת","description":"אשר תקשורת, קבלן תשתיות בפריסה ארצית, מספקת תשתיות תקשורת מתקדמות לעסקים, פתרונות מותאמים, ציוד איכותי וליווי מקצועי לכל פרויקט.","inLanguage":"he-IL","isPartOf":{"@id":"https://ashercom.com/#website"},"about":{"@id":"https://ashercom.com/#organization"},"breadcrumb":{"@id":"https://ashercom.com/#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://ashercom.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"בית","item":"https://ashercom.com/"}]}]}</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/plex-hebrew-hebrew-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/fonts.css">
   <style>
     :root,
     [data-theme="server"] {
@@ -1259,10 +1258,10 @@
         </div>
         <figure class="hero-orbit" aria-label="עבודות מהשטח" data-i18n-aria="orbit.aria">
           <div class="hero-orbit-ring">
-            <img class="is-show" src="assets/work-datacenter.png" alt="חדרי תקשורת וחוות שרתים בביצוע אשר תקשורת" data-i18n-alt="work.dc">
-            <img src="assets/work-fiber.png" alt="פאנל סיבים אופטיים בהתקנה מקצועית" data-i18n-alt="work.fiber">
-            <img src="assets/work-aruba.png" alt="ארון תקשורת עם כבלים מסומנים" data-i18n-alt="work.aruba">
-            <img src="assets/work-cabinet.png" alt="ארון תקשורת עם פאנל נחושת וסיבים" data-i18n-alt="work.cabinet">
+            <img class="is-show" src="assets/work-datacenter.webp" fetchpriority="high" alt="חדרי תקשורת וחוות שרתים בביצוע אשר תקשורת" data-i18n-alt="work.dc">
+            <img src="assets/work-fiber.webp" alt="פאנל סיבים אופטיים בהתקנה מקצועית" data-i18n-alt="work.fiber">
+            <img src="assets/work-aruba.webp" alt="ארון תקשורת עם כבלים מסומנים" data-i18n-alt="work.aruba">
+            <img src="assets/work-cabinet.webp" alt="ארון תקשורת עם פאנל נחושת וסיבים" data-i18n-alt="work.cabinet">
           </div>
         </figure>
       </div>
@@ -1286,24 +1285,24 @@
       <div class="wrap clients-head" data-i18n="clients">בין לקוחותינו</div>
       <div class="marquee-wrap">
       <div class="marquee">
-        <img src="assets/clients/bezeq.png" alt="בזק בינלאומי">
-        <img src="assets/clients/hashmal.png" alt="חברת החשמל">
-        <img src="assets/clients/cellcom.jpg" alt="סלקום">
-        <img src="assets/clients/unilever.jpg" alt="יוניליוור">
-        <img src="assets/clients/taas.jpg" alt="תע״ש">
-        <img src="assets/clients/matav.jpg" alt="מטב">
-        <img src="assets/clients/ashdod.jpg" alt="נמל אשדוד">
-        <img src="assets/clients/police.jpg" alt="משטרת ישראל">
-        <img src="assets/clients/sii.jpg" alt="מכון התקנים">
-        <img src="assets/clients/bezeq.png" alt="">
-        <img src="assets/clients/hashmal.png" alt="">
-        <img src="assets/clients/cellcom.jpg" alt="">
-        <img src="assets/clients/unilever.jpg" alt="">
-        <img src="assets/clients/taas.jpg" alt="">
-        <img src="assets/clients/matav.jpg" alt="">
-        <img src="assets/clients/ashdod.jpg" alt="">
-        <img src="assets/clients/police.jpg" alt="">
-        <img src="assets/clients/sii.jpg" alt="">
+        <img loading="lazy" decoding="async" src="assets/clients/bezeq.png" alt="בזק בינלאומי">
+        <img loading="lazy" decoding="async" src="assets/clients/hashmal.png" alt="חברת החשמל">
+        <img loading="lazy" decoding="async" src="assets/clients/cellcom.jpg" alt="סלקום">
+        <img loading="lazy" decoding="async" src="assets/clients/unilever.jpg" alt="יוניליוור">
+        <img loading="lazy" decoding="async" src="assets/clients/taas.jpg" alt="תע״ש">
+        <img loading="lazy" decoding="async" src="assets/clients/matav.jpg" alt="מטב">
+        <img loading="lazy" decoding="async" src="assets/clients/ashdod.jpg" alt="נמל אשדוד">
+        <img loading="lazy" decoding="async" src="assets/clients/police.jpg" alt="משטרת ישראל">
+        <img loading="lazy" decoding="async" src="assets/clients/sii.jpg" alt="מכון התקנים">
+        <img loading="lazy" decoding="async" src="assets/clients/bezeq.png" alt="">
+        <img loading="lazy" decoding="async" src="assets/clients/hashmal.png" alt="">
+        <img loading="lazy" decoding="async" src="assets/clients/cellcom.jpg" alt="">
+        <img loading="lazy" decoding="async" src="assets/clients/unilever.jpg" alt="">
+        <img loading="lazy" decoding="async" src="assets/clients/taas.jpg" alt="">
+        <img loading="lazy" decoding="async" src="assets/clients/matav.jpg" alt="">
+        <img loading="lazy" decoding="async" src="assets/clients/ashdod.jpg" alt="">
+        <img loading="lazy" decoding="async" src="assets/clients/police.jpg" alt="">
+        <img loading="lazy" decoding="async" src="assets/clients/sii.jpg" alt="">
       </div>
     </div>
     </div>
@@ -1315,7 +1314,7 @@
         </div>
         <div class="services-list">
           <article class="svc" id="servers" style="transition-delay:.05s">
-            <div class="svc-visual"><img src="assets/service-servers.png" alt="תחזוקת ארונות שרתים והקמת חוות שרתים" data-i18n-alt="svc.servers.alt"></div>
+            <div class="svc-visual"><img loading="lazy" decoding="async" src="assets/service-servers.webp" alt="תחזוקת ארונות שרתים והקמת חוות שרתים" data-i18n-alt="svc.servers.alt"></div>
             <div class="svc-copy">
               <span class="num">01</span>
               <h3 data-i18n="svc.servers.h">ארונות שרתים וחוות שרתים</h3>
@@ -1326,7 +1325,7 @@
             </div>
           </article>
           <article class="svc" id="cameras" style="transition-delay:.1s">
-            <div class="svc-visual"><img src="assets/service-cameras.png" alt="התקנה ותחזוקה של מצלמות אבטחה לעסקים" data-i18n-alt="svc.cameras.alt"></div>
+            <div class="svc-visual"><img loading="lazy" decoding="async" src="assets/service-cameras.webp" alt="התקנה ותחזוקה של מצלמות אבטחה לעסקים" data-i18n-alt="svc.cameras.alt"></div>
             <div class="svc-copy">
               <span class="num">02</span>
               <h3 data-i18n="svc.cameras.h">התקנה ותחזוקה של מצלמות אבטחה לעסקים</h3>
@@ -1337,7 +1336,7 @@
             </div>
           </article>
           <article class="svc" id="fiber" style="transition-delay:.12s">
-            <div class="svc-visual"><img src="assets/service-fiber.png" alt="סיבים אופטיים זוהרים בהתקנה מקצועית" data-i18n-alt="svc.fiber.alt"></div>
+            <div class="svc-visual"><img loading="lazy" decoding="async" src="assets/service-fiber.webp" alt="סיבים אופטיים זוהרים בהתקנה מקצועית" data-i18n-alt="svc.fiber.alt"></div>
             <div class="svc-copy">
               <span class="num">03</span>
               <h3 data-i18n="svc.fiber.h">סיבים אופטיים</h3>
@@ -1348,7 +1347,7 @@
             </div>
           </article>
           <article class="svc" id="network" style="transition-delay:.18s">
-            <div class="svc-visual"><img src="assets/service-network.png" alt="חדר תקשורת עם תשתיות CAT מסודרות" data-i18n-alt="svc.network.alt"></div>
+            <div class="svc-visual"><img loading="lazy" decoding="async" src="assets/service-network.webp" alt="חדר תקשורת עם תשתיות CAT מסודרות" data-i18n-alt="svc.network.alt"></div>
             <div class="svc-copy">
               <span class="num">04</span>
               <h3 data-i18n="svc.network.h">רשתות מחשבים</h3>
@@ -1359,7 +1358,7 @@
             </div>
           </article>
           <article class="svc" id="telephony" style="transition-delay:.24s">
-            <div class="svc-visual"><img src="assets/service-telephony.png" alt="תשתית טלפוניה ארגונית ומחברי נחושת" data-i18n-alt="svc.telephony.alt"></div>
+            <div class="svc-visual"><img loading="lazy" decoding="async" src="assets/service-telephony.webp" alt="תשתית טלפוניה ארגונית ומחברי נחושת" data-i18n-alt="svc.telephony.alt"></div>
             <div class="svc-copy">
               <span class="num">05</span>
               <h3 data-i18n="svc.telephony.h">טלפוניה ארגונית</h3>
@@ -1370,7 +1369,7 @@
             </div>
           </article>
           <article class="svc" id="lowvoltage" style="transition-delay:.3s">
-            <div class="svc-visual"><img src="assets/service-lowvoltage.png" alt="מצלמות IP ומערכות כריזה במבנה מסחרי" data-i18n-alt="svc.lowvoltage.alt"></div>
+            <div class="svc-visual"><img loading="lazy" decoding="async" src="assets/service-lowvoltage.webp" alt="מצלמות IP ומערכות כריזה במבנה מסחרי" data-i18n-alt="svc.lowvoltage.alt"></div>
             <div class="svc-copy">
               <span class="num">06</span>
               <h3 data-i18n="svc.lowvoltage.h">מתח נמוך</h3>
@@ -1442,7 +1441,7 @@
         </div>
         <div class="articles">
           <a class="article inview" href="חידוש-תשתיות-אופטיות/">
-            <img src="assets/article-optical-renewal.png" alt="">
+            <img loading="lazy" decoding="async" src="assets/article-optical-renewal.webp" alt="">
             <div class="article-body">
               <span data-i18n="art.optical.tag">סיבים אופטיים</span>
               <h3 data-i18n="art.optical.h">חידוש תשתיות אופטיות</h3>
@@ -1450,7 +1449,7 @@
             </div>
           </a>
           <a class="article inview" href="התקנת-תשתית-אינטרנט/">
-            <img src="assets/article-internet-infra.png" alt="">
+            <img loading="lazy" decoding="async" src="assets/article-internet-infra.webp" alt="">
             <div class="article-body">
               <span data-i18n="art.internet.tag">רשתות</span>
               <h3 data-i18n="art.internet.h">התקנת תשתית אינטרנט</h3>
@@ -1458,7 +1457,7 @@
             </div>
           </a>
           <a class="article inview" href="מערכות-תקשורת-ובקרה/">
-            <img src="assets/article-comm-control.png" alt="">
+            <img loading="lazy" decoding="async" src="assets/article-comm-control.webp" alt="">
             <div class="article-body">
               <span data-i18n="art.control.tag">מתח נמוך</span>
               <h3 data-i18n="art.control.h">מערכות תקשורת ובקרה</h3>
@@ -1529,7 +1528,7 @@
               <p data-i18n="form.thanks.p">נחזור אליכם בהקדם.</p>
             </div>
             <div class="contact-visual" aria-hidden="true">
-              <img class="contact-visual-bg" src="assets/contact-infra.png" alt="">
+              <img class="contact-visual-bg" loading="lazy" decoding="async" src="assets/contact-infra.webp" alt="">
               <img class="contact-visual-logo" src="assets/logo-asher.png" alt="">
             </div>
           </form>
@@ -1539,7 +1538,7 @@
   </main>
 
   <footer class="site-end">
-    <img class="bg" src="assets/footer-innovation.png" alt="">
+    <img class="bg" loading="lazy" decoding="async" src="assets/footer-innovation.webp" alt="">
     <div class="foot-inner wrap">
       <nav class="foot-cols" aria-label="ניווט תחתון" data-i18n-aria="foot.nav.aria">
         <details open>

@@ -4,7 +4,7 @@ window.ASHER_ARTICLES = [
     title: "התקנת תשתית אינטרנט",
     tag: "רשתות",
     read: "6 דק׳ קריאה",
-    img: "assets/article-internet-infra.png",
+    img: "assets/article-internet-infra.webp",
     dek: "לפעמים נדמה שהיא הייתה כאן מאז ומעולם, והתחושה הזו לא מפתיעה שהרי קשה להיזכר איך הצלחנו לתפקד לפני שרשת האינטרנט כבשה את חיינו.",
     related: ["wifi-guide", "infra-upgrade", "computer-issues"],
     body: `
@@ -39,7 +39,7 @@ window.ASHER_ARTICLES = [
     title: "הטיפול בבעיות מחשבים",
     tag: "רשתות",
     read: "5 דק׳ קריאה",
-    img: "assets/article-computer-issues.png",
+    img: "assets/article-computer-issues.webp",
     dek: "רבים מאיתנו מנהלים עסקים פרטיים ולא פעם מבינים: יש לנו בעיה בתקשורת.",
     related: ["internet-infra", "cabinet-renewal", "infra-upgrade"],
     body: `
@@ -56,7 +56,7 @@ window.ASHER_ARTICLES = [
     title: "המדריך לשיפור ה-WIFI בבית",
     tag: "רשתות",
     read: "7 דק׳ קריאה",
-    img: "assets/article-wifi-guide.png",
+    img: "assets/article-wifi-guide.webp",
     dek: "לכאורה, תשתית אלחוטית לא אמורה להקשות על השימוש שלנו באינטרנט אלא להקל אליו ולפשט אותו.",
     related: ["internet-infra", "fiber-equipment", "computer-issues"],
     body: `
@@ -86,7 +86,7 @@ window.ASHER_ARTICLES = [
     title: "התקנת מצלמות אבטחה",
     tag: "אבטחה",
     read: "6 דק׳ קריאה",
-    img: "assets/article-security-cameras.png",
+    img: "assets/article-security-cameras.webp",
     dek: "התחושה של סביבת עבודה או מגורים בטוחה היא תחושה אישית שאתם מבקשים ליצור ולשמר בכל רגע נתון.",
     related: ["comm-control", "cabinet-renewal", "internet-infra"],
     body: `
@@ -116,7 +116,7 @@ window.ASHER_ARTICLES = [
     title: "חידוש תשתיות אופטיות",
     tag: "סיבים",
     read: "5 דק׳ קריאה",
-    img: "assets/article-optical-renewal.png",
+    img: "assets/article-optical-renewal.webp",
     dek: "תשתיות אופטיות שמדמות את מערכת הראייה המשוכללת שלנו הפכו בשנים האחרונות לחוד החנית בתחום התקשורת.",
     related: ["fiber-equipment", "infra-upgrade", "internet-infra"],
     body: `
@@ -138,7 +138,7 @@ window.ASHER_ARTICLES = [
     title: "מערכות תקשורת ובקרה",
     tag: "מתח נמוך",
     read: "6 דק׳ קריאה",
-    img: "assets/article-comm-control.png",
+    img: "assets/article-comm-control.webp",
     dek: "במאה ה-21 המחשבים נמצאים בכל מקום, גם בבתים וגם בעסקים.",
     related: ["security-cameras", "cabinet-renewal", "computer-issues"],
     body: `
@@ -159,7 +159,7 @@ window.ASHER_ARTICLES = [
     title: "סידור וחידוש ארונות תקשורת",
     tag: "ארונות שרתים",
     read: "7 דק׳ קריאה",
-    img: "assets/article-cabinet-renewal.png",
+    img: "assets/article-cabinet-renewal.webp",
     dek: "ארונות תקשורת הם מקום שצריך להיות לא רק שמור, מוגן ומאובטח, אלא מסודר ומאורגן.",
     related: ["fiber-equipment", "comm-control", "computer-issues"],
     body: `
@@ -180,7 +180,7 @@ window.ASHER_ARTICLES = [
     title: "ציוד לסיבים אופטיים",
     tag: "סיבים",
     read: "5 דק׳ קריאה",
-    img: "assets/article-fiber-equipment.png",
+    img: "assets/article-fiber-equipment.webp",
     dek: "עם הזמן, סיבים אופטיים הופכים להיות יותר ויותר פופולאריים ובמגוון תחומים כמו טלפוניה, רשתות מחשבים, תקשורת נתונים, טלוויזיה, אינטרנט ותחומים אחרים.",
     related: ["optical-renewal", "cabinet-renewal", "infra-upgrade"],
     body: `
@@ -223,7 +223,7 @@ window.ASHER_ARTICLES = [
     title: "שדרוג תשתיות תקשורת",
     tag: "תשתיות",
     read: "6 דק׳ קריאה",
-    img: "assets/article-infra-upgrade.png",
+    img: "assets/article-infra-upgrade.webp",
     dek: "לתשתית התקשורת יש משקל נכבד במיוחד בהבטחת ההתנהלות השוטפת המיטבית בכל עסק ובכל ארגון.",
     related: ["optical-renewal", "internet-infra", "cabinet-renewal"],
     body: `
@@ -246,7 +246,7 @@ window.ASHER_ARTICLES = [
     title: "אינטרנט לעסקים",
     tag: "רשתות",
     read: "6 דק׳ קריאה",
-    img: "assets/article-internet-business.png",
+    img: "assets/article-internet-business.webp",
     dek: "כל עסק באשר הוא נדרש לחיבור אינטרנט – לתשתית ולספק. לא ניתן לנהל עסק בצורה תקינה ללא חיבור אינטרנטי יציב ומהיר.",
     related: ["fiber-internet", "internet-infra", "comm-faults"],
     body: `
@@ -275,7 +275,7 @@ window.ASHER_ARTICLES = [
     title: "תכנון חדרי מחשב",
     tag: "ארונות שרתים",
     read: "5 דק׳ קריאה",
-    img: "assets/article-computer-rooms.png",
+    img: "assets/article-computer-rooms.webp",
     dek: "חדרי מחשב ושרתים הם משאב קריטי לתפקוד תקין של עסקים וארגונים גדולים.",
     related: ["cabinet-renewal", "infra-maintenance", "internet-business"],
     body: `
@@ -300,7 +300,7 @@ window.ASHER_ARTICLES = [
     title: "תיקון תקלות תקשורת",
     tag: "רשתות",
     read: "5 דק׳ קריאה",
-    img: "assets/article-comm-faults.png",
+    img: "assets/article-comm-faults.webp",
     dek: "תקלת תקשורת, כולל כזו קלה, עלולה לגרום לנזקים חמורים לכל עסק או ארגון.",
     related: ["computer-issues", "fiber-tech", "infra-maintenance"],
     body: `
@@ -324,7 +324,7 @@ window.ASHER_ARTICLES = [
     title: "טכנאי סיבים אופטיים",
     tag: "סיבים",
     read: "5 דק׳ קריאה",
-    img: "assets/article-fiber-tech.png",
+    img: "assets/article-fiber-tech.webp",
     dek: "הצמיחה בהיקף השימוש בסיבים אופטיים הביאה לגידול בביקוש לשירותיו של טכנאי סיבים אופטיים.",
     related: ["fiber-internet", "optical-renewal", "comm-faults"],
     body: `
@@ -347,7 +347,7 @@ window.ASHER_ARTICLES = [
     title: "תשתית תקשורת טלפונית למוסדות",
     tag: "טלפוניה",
     read: "6 דק׳ קריאה",
-    img: "assets/article-telephony-infra.png",
+    img: "assets/article-telephony-infra.webp",
     dek: "יציבותה ואמינותה של התקשורת הארגונית תלויה בתשתית — במיוחד במוסדות ובעסקים גדולים.",
     related: ["internet-business", "computer-rooms", "infra-maintenance"],
     body: `
@@ -374,7 +374,7 @@ window.ASHER_ARTICLES = [
     title: "אביזרי תקשורת",
     tag: "תשתיות",
     read: "5 דק׳ קריאה",
-    img: "assets/article-comm-accessories.png",
+    img: "assets/article-comm-accessories.webp",
     dek: "גם בחירת אביזרי תקשורת היא פעולה שרק אנשי מקצוע מיומנים ומנוסים יכולים לבצע כך שהתוצאה תהיה זו הרצויה.",
     related: ["fiber-equipment", "fiber-tech", "infra-upgrade"],
     body: `
@@ -399,7 +399,7 @@ window.ASHER_ARTICLES = [
     title: "אחזקת תשתיות תקשורת",
     tag: "תשתיות",
     read: "5 דק׳ קריאה",
-    img: "assets/article-infra-maintenance.png",
+    img: "assets/article-infra-maintenance.webp",
     dek: "גם המערכת האיכותית ביותר לא תספק ביצועים מקסימליים אם התחזוקה שלה אינה מוקפדת.",
     related: ["infra-upgrade", "comm-faults", "cabinet-renewal"],
     body: `
@@ -421,7 +421,7 @@ window.ASHER_ARTICLES = [
     title: "אינטרנט סיבים",
     tag: "סיבים",
     read: "6 דק׳ קריאה",
-    img: "assets/article-fiber-internet.png",
+    img: "assets/article-fiber-internet.webp",
     dek: "אם ברצונכם להגביר את הקצב ולשדרג את תשתיות התקשורת של העסק — אינטרנט על סיבים אופטיים הוא הצעד הבא.",
     related: ["internet-business", "fiber-tech", "optical-renewal"],
     body: `
@@ -446,7 +446,7 @@ window.ASHER_ARTICLES = [
     title: "שאלות נפוצות על סיבים אופטיים",
     tag: "סיבים",
     read: "7 דק׳ קריאה",
-    img: "assets/article-fiber-internet.png",
+    img: "assets/article-fiber-internet.webp",
     dek: "שאלות נפוצות על סיבים אופטיים: חיבור סיב אופטי לעסק ולבית, קרבה לתשתית פעילה, בחירת חיבור ואיכות השירות.",
     related: ["fiber-internet", "fiber-tech", "optical-renewal"],
     body: `
@@ -471,7 +471,7 @@ window.ASHER_ARTICLES = [
     title: "פתרונות תקשורת לעסקים על גבי האינטרנט",
     tag: "רשתות",
     read: "7 דק׳ קריאה",
-    img: "assets/article-internet-business.png",
+    img: "assets/article-internet-business.webp",
     dek: "פתרונות תקשורת לעסקים קטנים, בינוניים וגדולים על גבי רשת האינטרנט: מרכזיות IP, תשתית אחודה וגיבוי.",
     related: ["internet-business", "internet-infra", "fiber-internet"],
     body: `
@@ -498,7 +498,7 @@ window.ASHER_ARTICLES = [
     title: "טכנאי רשתות תקשורת",
     tag: "רשתות",
     read: "7 דק׳ קריאה",
-    img: "assets/article-computer-issues.png",
+    img: "assets/article-computer-issues.webp",
     dek: "טכנאי תקשורת מוסמך ומנוסה: רשתות תקשורת מחשבים, אבחון תקלות, תחזוקה והתקנה בפריסה ארצית.",
     related: ["comm-faults", "computer-issues", "internet-infra"],
     body: `
@@ -523,7 +523,7 @@ window.ASHER_ARTICLES = [
     title: "מערכות כריזה",
     tag: "מתח נמוך",
     read: "5 דק׳ קריאה",
-    img: "assets/service-page-lowvoltage.png",
+    img: "assets/service-page-lowvoltage.webp",
     dek: "מערכות כריזה למוסדות, בתי ספר ועסקים — תכנון, התקנה ותחזוקה כחלק ממערכות מתח נמוך.",
     related: ["comm-control", "security-cameras", "internet-infra"],
     body: `
@@ -542,7 +542,7 @@ window.ASHER_ARTICLES = [
     title: "מצלמות אבטחה לעסקים",
     tag: "אבטחה",
     read: "5 דק׳ קריאה",
-    img: "assets/service-page-cameras.png",
+    img: "assets/service-page-cameras.webp",
     dek: "מצלמות אבטחה לעסקים: כיסוי קופות, מחסן, כניסות וגישה מרחוק — תכנון והתקנה עם אשר תקשורת.",
     related: ["security-cameras", "comm-control", "internet-infra"],
     body: `

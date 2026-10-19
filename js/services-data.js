@@ -4,7 +4,7 @@ window.ASHER_SERVICES = [
     title: "ארונות תקשורת",
     tag: "ארונות שרתים",
     read: "שירות",
-    img: "assets/service-page-servers.png",
+    img: "assets/service-page-servers.webp",
     dek: "ארונות תקשורת מספקים לציוד התשתיות את התנאים הטובים ביותר — אבטחה, הגנה, טמפרטורה נאותה וארגון הכבלים.",
     related: ["network", "computers", "lowvoltage"],
     body: `
@@ -32,7 +32,7 @@ window.ASHER_SERVICES = [
     title: "מערכת מצלמות אבטחה",
     tag: "אבטחה",
     read: "שירות",
-    img: "assets/service-page-cameras.png",
+    img: "assets/service-page-cameras.webp",
     dek: "התקנת מערכת מצלמות אבטחה מעניקה שליטה מלאה ומעקב רציף אחר המתרחש בסביבת הבית או העסק.",
     related: ["lowvoltage", "servers", "network"],
     body: `
@@ -57,7 +57,7 @@ window.ASHER_SERVICES = [
     title: "סיבים אופטיים",
     tag: "סיבים",
     read: "שירות",
-    img: "assets/service-page-fiber.png",
+    img: "assets/service-page-fiber.webp",
     dek: "תכנון, ייעוץ, התקנה, בדיקה והיתוך של סיבים אופטיים — תשתית אופטית לעסקים בקצב גבוה ובאבטחת מידע מרבית.",
     related: ["optical", "computers", "telephony"],
     body: `
@@ -99,7 +99,7 @@ window.ASHER_SERVICES = [
     title: "תקשורת אופטית",
     tag: "סיבים",
     read: "שירות",
-    img: "assets/service-page-optical.png",
+    img: "assets/service-page-optical.webp",
     dek: "תקשורת אופטית היא אחד הפתרונות המתקדמים ביותר להעברת מידע — משדר, תווך ומקלט על בסיס אור.",
     related: ["fiber", "network", "servers"],
     body: `
@@ -143,7 +143,7 @@ window.ASHER_SERVICES = [
     title: "רשת מחשבים לחברות ועסקים",
     tag: "רשתות",
     read: "שירות",
-    img: "assets/service-page-network.png",
+    img: "assets/service-page-network.webp",
     dek: "רשת המחשבים היא הדרך שבה מחשבים מתקשרים זה עם זה — חוטית או אלחוטית, מתוכננת לצרכי העסק.",
     related: ["computers", "servers", "fiber"],
     body: `
@@ -171,7 +171,7 @@ window.ASHER_SERVICES = [
     title: "תקשורת מחשבים",
     tag: "רשתות",
     read: "שירות",
-    img: "assets/service-page-computers.png",
+    img: "assets/service-page-computers.webp",
     dek: "תכנון והתקנת תשתיות תקשורת בתקן CAT5E, CAT6 ו-CAT7 — חדרי מחשב, מסדים ותשתית אחודה לפי צורכי הלקוח.",
     related: ["network", "servers", "fiber"],
     body: `
@@ -215,7 +215,7 @@ window.ASHER_SERVICES = [
     title: "תקשורת טלפוניה",
     tag: "טלפוניה",
     read: "שירות",
-    img: "assets/service-page-telephony.png",
+    img: "assets/service-page-telephony.webp",
     dek: "שירותי תקשורת טלפוניה מתקדמים לעסקים — מרכזיות IP, מוקדים, הקלטת שיחות ובדיקת קווי נחושת בפריסה ארצית.",
     related: ["network", "lowvoltage", "fiber"],
     body: `
@@ -244,7 +244,7 @@ window.ASHER_SERVICES = [
     title: "מערכות מתח נמוך",
     tag: "מתח נמוך",
     read: "שירות",
-    img: "assets/service-page-lowvoltage.png",
+    img: "assets/service-page-lowvoltage.webp",
     dek: "תכנון, התקנה, תפעול וייעוץ למערכות מתח נמוך — כריזה, מצלמות IP, בקרת כניסה ותקשורת מחשבים.",
     related: ["cameras", "telephony", "computers"],
     body: `

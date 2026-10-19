@@ -442,9 +442,8 @@ function legacyHtml(slug, post) {
   <meta property="article:published_time" content="${esc(post.date)}">
   <meta property="article:modified_time" content="${esc(post.modified || post.date)}">
   ${schema}
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/plex-hebrew-hebrew-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/fonts.css">
   <link rel="stylesheet" href="assets/site.css">
   <link rel="stylesheet" href="assets/article.css">
 </head>
@@ -512,9 +511,8 @@ function pageHtml(slug, info, canonicalHref, title, desc) {
   <meta property="og:url" content="${canonicalHref}">
   <meta property="og:site_name" content="אשר תקשורת">
   ${schema}
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/plex-hebrew-hebrew-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/fonts.css">
   <link rel="stylesheet" href="assets/site.css">
   <link rel="stylesheet" href="assets/article.css">
 </head>
@@ -613,6 +611,8 @@ function categoryHtml(cat, posts) {
   <meta property="og:url" content="${canonicalHref}">
   <meta property="og:site_name" content="אשר תקשורת">
   ${schemaGraph({ kind: "category", url: canonicalHref, title: pageTitle, name, desc })}
+  <link rel="preload" href="assets/fonts/plex-hebrew-hebrew-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/fonts.css">
   <link rel="stylesheet" href="assets/site.css">
   <link rel="stylesheet" href="assets/article.css">
 </head>

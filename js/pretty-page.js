@@ -54,7 +54,7 @@
     const listHref = relatedKind === "service" ? href.service : href.article;
     const metaLine = item.read ? item.read + " · אשר תקשורת" : "אשר תקשורת";
     const cover = item.img
-      ? `<aside class="article-cover"><img src="${item.img}" alt="${item.title}"></aside>`
+      ? `<aside class="article-cover"><img src="${item.img}" alt="${item.title}" fetchpriority="high"></aside>`
       : "";
     const relatedHtml = related.length ? `
       <section class="related">
@@ -63,7 +63,7 @@
           <div class="related-grid">
             ${related.map(function (r) {
               return `<a class="article" href="${listHref(r.id)}">
-                <img src="${r.img}" alt="">
+                <img src="${r.img}" alt="" loading="lazy" decoding="async">
                 <div class="article-body">
                   <span>${r.tag}</span>
                   <h3>${r.title}</h3>
@@ -124,7 +124,7 @@
       title: h1 ? h1.textContent.trim() : document.title,
       tag: seed.getAttribute("data-tag") || "מאמר",
       read: "",
-      img: img ? img.getAttribute("src") : "assets/work-datacenter.png",
+      img: img ? img.getAttribute("src") : "assets/work-datacenter.webp",
       dek: "",
       body: prose ? prose.innerHTML : "",
       related: []
