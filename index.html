@@ -1341,7 +1341,7 @@
         </div>
         <div class="services-list">
           <article class="svc" id="servers" style="transition-delay:.05s">
-            <div class="svc-visual"><img loading="lazy" decoding="async" src="assets/service-servers-800.webp" alt="תחזוקת ארונות שרתים והקמת חוות שרתים" data-i18n-alt="svc.servers.alt" width="800" height="533"></div>
+            <div class="svc-visual"><img fetchpriority="low" src="assets/service-servers-640.webp" alt="תחזוקת ארונות שרתים והקמת חוות שרתים" data-i18n-alt="svc.servers.alt" width="640" height="427"></div>
             <div class="svc-copy">
               <span class="num">01</span>
               <h3 data-i18n="svc.servers.h">ארונות שרתים וחוות שרתים</h3>
@@ -1352,7 +1352,7 @@
             </div>
           </article>
           <article class="svc" id="cameras" style="transition-delay:.1s">
-            <div class="svc-visual"><img loading="lazy" decoding="async" src="assets/service-cameras-800.webp" alt="התקנה ותחזוקה של מצלמות אבטחה לעסקים" data-i18n-alt="svc.cameras.alt" width="800" height="533"></div>
+            <div class="svc-visual"><img fetchpriority="low" src="assets/service-cameras-640.webp" alt="התקנה ותחזוקה של מצלמות אבטחה לעסקים" data-i18n-alt="svc.cameras.alt" width="640" height="427"></div>
             <div class="svc-copy">
               <span class="num">02</span>
               <h3 data-i18n="svc.cameras.h">התקנה ותחזוקה של מצלמות אבטחה לעסקים</h3>
@@ -1363,7 +1363,7 @@
             </div>
           </article>
           <article class="svc" id="fiber" style="transition-delay:.12s">
-            <div class="svc-visual"><img loading="lazy" decoding="async" src="assets/service-fiber-800.webp" alt="סיבים אופטיים זוהרים בהתקנה מקצועית" data-i18n-alt="svc.fiber.alt" width="800" height="533"></div>
+            <div class="svc-visual"><img fetchpriority="low" src="assets/service-fiber-640.webp" alt="סיבים אופטיים זוהרים בהתקנה מקצועית" data-i18n-alt="svc.fiber.alt" width="640" height="427"></div>
             <div class="svc-copy">
               <span class="num">03</span>
               <h3 data-i18n="svc.fiber.h">סיבים אופטיים</h3>
@@ -1374,7 +1374,7 @@
             </div>
           </article>
           <article class="svc" id="network" style="transition-delay:.18s">
-            <div class="svc-visual"><img loading="lazy" decoding="async" src="assets/service-network-800.webp" alt="חדר תקשורת עם תשתיות CAT מסודרות" data-i18n-alt="svc.network.alt" width="800" height="533"></div>
+            <div class="svc-visual"><img fetchpriority="low" src="assets/service-network-640.webp" alt="חדר תקשורת עם תשתיות CAT מסודרות" data-i18n-alt="svc.network.alt" width="640" height="427"></div>
             <div class="svc-copy">
               <span class="num">04</span>
               <h3 data-i18n="svc.network.h">רשתות מחשבים</h3>
@@ -1385,7 +1385,7 @@
             </div>
           </article>
           <article class="svc" id="telephony" style="transition-delay:.24s">
-            <div class="svc-visual"><img loading="lazy" decoding="async" src="assets/service-telephony-800.webp" alt="תשתית טלפוניה ארגונית ומחברי נחושת" data-i18n-alt="svc.telephony.alt" width="800" height="533"></div>
+            <div class="svc-visual"><img fetchpriority="low" src="assets/service-telephony-640.webp" alt="תשתית טלפוניה ארגונית ומחברי נחושת" data-i18n-alt="svc.telephony.alt" width="640" height="427"></div>
             <div class="svc-copy">
               <span class="num">05</span>
               <h3 data-i18n="svc.telephony.h">טלפוניה ארגונית</h3>
@@ -1396,7 +1396,7 @@
             </div>
           </article>
           <article class="svc" id="lowvoltage" style="transition-delay:.3s">
-            <div class="svc-visual"><img loading="lazy" decoding="async" src="assets/service-lowvoltage-800.webp" alt="מצלמות IP ומערכות כריזה במבנה מסחרי" data-i18n-alt="svc.lowvoltage.alt" width="800" height="533"></div>
+            <div class="svc-visual"><img fetchpriority="low" src="assets/service-lowvoltage-640.webp" alt="מצלמות IP ומערכות כריזה במבנה מסחרי" data-i18n-alt="svc.lowvoltage.alt" width="640" height="427"></div>
             <div class="svc-copy">
               <span class="num">06</span>
               <h3 data-i18n="svc.lowvoltage.h">מתח נמוך</h3>
@@ -1811,10 +1811,6 @@
       const mm = gsap.matchMedia();
       mm.add("(min-width: 901px)", () => {
         gsap.utils.toArray(".svc").forEach((el) => {
-          gsap.from(el, {
-            y: 64, opacity: 0, duration: 0.9, ease: "power3.out",
-            scrollTrigger: { trigger: el, start: "top 84%" }
-          });
           const img = el.querySelector(".svc-visual img");
           if (img) {
             gsap.fromTo(img, { yPercent: -6 }, {
@@ -1831,10 +1827,6 @@
         });
       });
       mm.add("(max-width: 900px)", () => {
-        gsap.from(".services-list", {
-          y: 28, opacity: 0, duration: 0.7, ease: "power3.out",
-          scrollTrigger: { trigger: "#services", start: "top 84%" }
-        });
         gsap.from(".article", {
           y: 18, opacity: 0, stagger: 0.1, duration: 0.55, ease: "power3.out",
           scrollTrigger: { trigger: "#articles", start: "top 84%" }
