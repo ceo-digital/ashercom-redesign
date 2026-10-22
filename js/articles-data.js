@@ -495,7 +495,7 @@ window.ASHER_ARTICLES = [
   },
   {
     id: "comm-tech",
-    title: "טכנאי רשתות תקשורת",
+    title: "טכנאי תקשורת",
     tag: "רשתות",
     read: "7 דק׳ קריאה",
     img: "assets/article-computer-issues.webp",
