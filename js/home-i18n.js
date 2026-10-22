@@ -166,8 +166,8 @@ window.ASHER_EN = {
   "wa.aria": "WhatsApp Asher Communications 050-722-8900 — opens in a new window",
   "lang.toEn": "EN",
   "lang.toHe": "HE",
-  "lang.ariaEn": "English",
-  "lang.ariaHe": "עברית"
+  "lang.ariaEn": "EN English",
+  "lang.ariaHe": "HE עברית"
 };
 
 (function () {
