@@ -30,7 +30,7 @@ window.ASHER_EN = {
   "hero.kicker": "Communications infrastructure contractor",
   "hero.line1": "The Technological Backbone",
   "hero.line2": "of Leading Organizations",
-  "hero.lead": "Business communications infrastructure: fiber optics, networking, telephony, and low-voltage systems — planning, installation and supervision nationwide.",
+  "hero.lead": "<a href=\"תשתיות-תקשורת-לעסקים/\">Business communications infrastructure</a>: fiber optics, networking, telephony, and low-voltage systems — planning, installation and supervision nationwide.",
   "cta.details": "Contact Us",
   "cta.services": "Our services",
   "orbit.aria": "Work from the field",
@@ -51,7 +51,7 @@ window.ASHER_EN = {
   "svc.cameras.p": "Perimeter security and smart monitoring for your business. Advanced CCTV and surveillance systems with remote access and ongoing technical support to keep you secure 24/7.",
   "svc.cameras.alt": "Installation and maintenance of security cameras for businesses",
   "svc.fiber.h": "Fiber optics",
-  "svc.fiber.p": "Design, installation, OTDR testing, optical closures, and connectors — from network core to the edge.",
+  "svc.fiber.p": "Design, installation and testing of <a href=\"סיבים-אופטיים/\">fiber for businesses</a>: OTDR, closures and connectors, from the network core to the edge.",
   "svc.fiber.alt": "Professionally installed glowing fiber optics",
   "svc.network.h": "Computer networks",
   "svc.network.p": "CAT6A / CAT7 / FTTD infrastructure, server rooms, and rack integration — engineered for future capacity, not just today's demand.",
@@ -86,9 +86,9 @@ window.ASHER_EN = {
   "rank.infra.h": "Communications infrastructure",
   "rank.infra.p": "We provide communications solutions in fiber optics, telephony, computers, PA systems and low-voltage systems. Asher Communications works nationwide — consulting, planning, execution and supervision.",
   "rank.contractor.h": "Communications infrastructure contractor",
-  "rank.contractor.p": "Whether you are planning an office, a building or a live site, communications infrastructure requires professional planning and installation. A communications infrastructure contractor defines the needs, maps the route and installs the network, telephony, computers and internet connection. Asher Communications provides consulting and deployment of the infrastructure the business needs to operate.",
-  "rank.biz.h": "Communications infrastructure for businesses",
-  "rank.biz.p": "Communications infrastructure for businesses is planned according to the size of the organization and the number of workstations. The business depends on stable communications — computers, internet and an internal network. Asher Communications designs and builds the infrastructure according to the needs of the business, including room to grow.",
+  "rank.contractor.p": "Whether you are planning an office, a building or a live site, communications infrastructure requires professional planning and installation. A communications infrastructure contractor defines the needs, maps the route and installs the network, telephony, computers and internet connection. Asher Communications provides consulting and deployment of the infrastructure the business needs to operate. Book a <a href=\"טכנאי-רשתות-תקשורת/\">communications technician</a>.",
+  "rank.biz.h": "<a href=\"תשתיות-תקשורת-לעסקים/\">Communications infrastructure for businesses</a>",
+  "rank.biz.p": "<a href=\"תשתיות-תקשורת-לעסקים/\">Communications infrastructure for businesses</a> is planned according to the size of the organization and the number of workstations. The business depends on stable communications — computers, internet and an internal network. Asher Communications designs and builds the infrastructure according to the needs of the business, including room to grow.",
   "contact.kicker": "Contact",
   "contact.h": "Ready to take your organization’s infrastructure to the next level?",
   "contact.why": "30 years of expertise in communications infrastructure for companies and organizations. Planning and execution to the highest standard, with operational continuity.",
@@ -121,6 +121,7 @@ window.ASHER_EN = {
   "foot.fiber": "Fiber optics",
   "foot.optical": "Optical communications",
   "foot.computers": "Computer communications",
+  "foot.bizinfra": "Communications infrastructure for businesses",
   "foot.telephony": "Telephony communications",
   "foot.telinfra": "Telephony communications infrastructure",
   "foot.cats": "Main categories",
@@ -165,8 +166,8 @@ window.ASHER_EN = {
   "wa.aria": "WhatsApp Asher Communications 050-722-8900 — opens in a new window",
   "lang.toEn": "EN",
   "lang.toHe": "HE",
-  "lang.ariaEn": "English",
-  "lang.ariaHe": "עברית"
+  "lang.ariaEn": "EN English",
+  "lang.ariaHe": "HE עברית"
 };
 
 (function () {
