@@ -288,8 +288,12 @@
     }
     .hero-title .line-wrap { display: block; overflow: hidden; }
     .hero-title .line { display: block; }
+    .hero h2.hero-q {
+      font-size: 18px; font-weight: 700; line-height: 1.4; letter-spacing: 0;
+      max-width: 48ch; margin: 22px 0 0; color: var(--hero-text);
+    }
     .hero p.lead {
-      margin-top: 22px; max-width: 38ch; font-size: 18px;
+      margin-top: 8px; max-width: 48ch; font-size: 18px;
       color: var(--hero-muted); line-height: 1.7;
     }
     .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
@@ -948,7 +952,8 @@
         padding: 28px 0 20px;
       }
       .hero-title { max-width: none; }
-      .hero p.lead { max-width: none; font-size: 16px; margin-top: 16px; }
+      .hero h2.hero-q { max-width: none; margin-top: 16px; }
+      .hero p.lead { max-width: none; font-size: 16px; margin-top: 8px; }
       .hero-orbit { width: min(260px, 72vw); }
       .hero-actions { gap: 10px; justify-content: center; width: 100%; }
       html[dir="ltr"] .hero-grid { text-align: center; }
@@ -1277,7 +1282,8 @@
             <span class="line-wrap"><span class="line" data-i18n="hero.line1">העוגן הטכנולוגי</span></span>
             <span class="line-wrap"><span class="line" data-i18n="hero.line2">מאחורי הארגונים המובילים</span></span>
           </p>
-          <p class="lead" data-i18n="hero.lead" data-i18n-html><a href="תשתיות-תקשורת-לעסקים/">תשתיות תקשורת לעסקים</a>: סיבים אופטיים, רשתות, טלפוניה ומערכות מתח נמוך — תכנון, התקנה ופיקוח בפריסה ארצית.</p>
+          <h2 class="hero-q" data-i18n="hero.q">מיהו קבלן תשתיות תקשורת?</h2>
+          <p class="lead" data-i18n="hero.lead">קבלן תשתיות תקשורת מתכנן, מתקין ומפקח על הרשת של העסק: סיבים אופטיים, רשת מחשבים, טלפוניה ומערכות מתח נמוך. הוא קובע את התוואי, מבצע את ההתקנה באתר פעיל ובודק שהעמדות והחיבור החוצה עובדים. אשר תקשורת עושה את העבודה הזו למשרד ולמוסד, בפריסה ארצית.</p>
           <div class="hero-actions">
             <a class="btn btn-copper" href="#contact" data-i18n="cta.details">השאירו פרטים</a>
             <a class="btn btn-ghost" href="#services" data-i18n="cta.services">השירותים שלנו</a>
@@ -1502,7 +1508,7 @@
           <p data-i18n="rank.infra.p">חברתנו עוסקת במתן פתרונות תקשורת בתחום סיבים אופטיים, טלפוניה, מחשבים, כריזה ומערכות מתח נמוך. אשר תקשורת מספקת שירות בפריסה ארצית — ייעוץ, תכנון, ביצוע ופיקוח.</p>
         </article>
         <article class="rank-item">
-          <h2 data-i18n="rank.contractor.h">קבלן תשתיות תקשורת</h2>
+          <h2 data-i18n="rank.contractor.h">איך עובדים מול הקבלן</h2>
           <p data-i18n="rank.contractor.p" data-i18n-html>בין אם אתם מתכננים משרד, מבנה או אתר פעיל, תשתיות התקשורת מחייבות תכנון והתקנה מקצועיים. עם קבלן תשתיות תקשורת אפשר להגדיר את הצרכים, לשרטט את התוואי ולבצע התקנה של הרשת, הטלפוניה, המחשבים והחיבור לאינטרנט. אשר תקשורת מעניקה ייעוץ והקמה של התשתיות הדרושות לעבודה התקינה של העסק. להזמנת <a href="טכנאי-רשתות-תקשורת/">טכנאי תקשורת</a>.</p>
         </article>
         <article class="rank-item">
