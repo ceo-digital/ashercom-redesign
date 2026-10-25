@@ -105,7 +105,7 @@
       </section>
       <section class="article-body-band">
         <div class="wrap article-layout">
-          <article class="prose">${item.body}</article>
+          <article class="prose">${item.body.trim()}</article>
           ${cover}
         </div>
       </section>
@@ -126,7 +126,7 @@
       read: "",
       img: img ? img.getAttribute("src") : "assets/work-datacenter.webp",
       dek: "",
-      body: prose ? prose.innerHTML : "",
+      body: prose ? prose.innerHTML.trim() : "",
       related: []
     }, "article");
     return;

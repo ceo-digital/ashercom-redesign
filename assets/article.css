@@ -53,6 +53,7 @@
   font-size: 1.4rem; max-width: none; margin: 36px 0 14px;
   padding-right: 14px; border-right: 4px solid var(--accent);
 }
+.prose > h2:first-child { margin-top: 0; }
 .prose h3 { font-size: 1.12rem; margin: 22px 0 8px; max-width: none; }
 .privacy-layout { grid-template-columns: minmax(0, 78ch); }
 .prose p { margin-bottom: 16px; }
