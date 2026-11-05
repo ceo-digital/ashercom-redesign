@@ -87,7 +87,7 @@
       "description": item.dek,
       "inLanguage": "he",
       "url": absCanon(pageSlug()),
-      "provider": { "@type": "LocalBusiness", "name": "אשר תקשורת", "telephone": "+972-1700-505-616" }
+      "provider": { "@id": "https://ashercom.com/#organization" }
     });
     document.getElementById("main").innerHTML = href.rewrite(`
       <section class="article-hero">
