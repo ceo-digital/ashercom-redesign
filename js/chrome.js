@@ -260,9 +260,10 @@
     schema.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
+      "@id": "https://ashercom.com/#organization",
       "name": "אשר תקשורת",
       "url": "https://ashercom.com/",
-      "telephone": "+972-1700-505-616",
+      "telephone": "1-700-505-616",
       "email": "asher@ashercom.com",
       "areaServed": "IL",
       "image": "https://ashercom.com/assets/logo-asher.png",
