@@ -132,7 +132,7 @@ window.ASHER_EN = {
   "foot.rooms": "Computer-room planning",
   "foot.faults": "Communications fault repair",
   "foot.fibertech": "Fiber-optic technicians",
-  "foot.telinst": "Institutional telephony infrastructure",
+  "foot.telinst": "Phone infrastructure for large businesses",
   "foot.accessories": "Communications accessories",
   "foot.maint": "Communications infrastructure maintenance",
   "foot.fiberinet": "Fiber internet",
