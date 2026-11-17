@@ -126,7 +126,6 @@ window.ASHER_EN = {
   "foot.bizinfra": "Communications infrastructure for businesses",
   "foot.contractor": "How to choose a communications infrastructure contractor",
   "foot.telephony": "Telephony communications",
-  "foot.telinfra": "Telephony communications infrastructure",
   "foot.cats": "Main categories",
   "foot.biznet": "Internet for business",
   "foot.rooms": "Computer-room planning",
