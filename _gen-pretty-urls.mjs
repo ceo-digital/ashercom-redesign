@@ -431,13 +431,13 @@ function legacyHtml(slug, post) {
 <html lang="he" dir="rtl">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3X0DSFYW2Q"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFHDTVX9D6"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-3X0DSFYW2Q');
+  gtag('config', 'G-JFHDTVX9D6');
 </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -512,13 +512,13 @@ function pageHtml(slug, info, canonicalHref, title, desc) {
 <html lang="he" dir="rtl">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3X0DSFYW2Q"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFHDTVX9D6"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-3X0DSFYW2Q');
+  gtag('config', 'G-JFHDTVX9D6');
 </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -623,13 +623,13 @@ function categoryHtml(cat, posts) {
 <html lang="he" dir="rtl">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3X0DSFYW2Q"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFHDTVX9D6"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-3X0DSFYW2Q');
+  gtag('config', 'G-JFHDTVX9D6');
 </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
