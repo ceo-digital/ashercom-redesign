@@ -1,5 +1,46 @@
 (function () {
   const TO = "asher@ashercom.com";
+  const CONSENT_KEY = "asher-privacy-consent";
+  const CONSENT_VERSION = "2027-1";
+
+  function analyticsDenied() {
+    const live = window.ASHER_CONSENT;
+    if (live && typeof live.analytics === "boolean") return live.analytics === false;
+    try {
+      const data = JSON.parse(localStorage.getItem(CONSENT_KEY) || "null");
+      if (!data || data.version !== CONSENT_VERSION || !data.prefs) return false;
+      return data.prefs.analytics === false;
+    } catch (err) {
+      return false;
+    }
+  }
+
+  function track(name, params) {
+    if (analyticsDenied()) return;
+    if (typeof window.gtag !== "function") return;
+    window.gtag("event", name, params);
+  }
+
+  document.addEventListener("click", (e) => {
+    const link = e.target && e.target.closest ? e.target.closest("a") : null;
+    if (!link) return;
+    const href = link.getAttribute("href") || "";
+    if (href.slice(0, 4).toLowerCase() === "tel:") {
+      track("phone_click", {
+        method: "phone",
+        link_url: href,
+        phone_number: href.replace(/\D/g, "")
+      });
+      return;
+    }
+    if (link.classList.contains("wa") || href.indexOf("wa.me") !== -1) {
+      track("whatsapp_click", {
+        method: "whatsapp",
+        link_url: href
+      });
+    }
+  });
+
   document.addEventListener("submit", async (e) => {
     const form = e.target.closest("form.contact-form");
     if (!form || form.classList.contains("is-sending") || form.classList.contains("is-sent")) return;
@@ -32,6 +73,7 @@
       });
       if (!res.ok) throw new Error("send failed");
       form.classList.add("is-sent");
+      track("form_submit", { method: "form", form_name: "contact" });
     } catch (err) {
       const body = "שם: " + data.name + "\nטלפון: " + data.phone + "\nסיבת הפנייה: " + data.reason;
       window.location.href = "mailto:" + TO +

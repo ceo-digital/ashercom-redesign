@@ -110,7 +110,7 @@
           <input type="checkbox" name="pref-analytics">
           <span>
             <b>מדידה</b>
-            ניתוח שימוש. כבוי כברירת מחדל, ואינו פעיל באתר כיום.
+            ניתוח שימוש פעיל באתר, כולל לחיצה על טלפון, שליחת טופס ווואטסאפ.
           </span>
         </label>
         <label class="privacy-row">
