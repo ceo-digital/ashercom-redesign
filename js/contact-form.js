@@ -21,6 +21,17 @@
     window.gtag("event", name, params);
   }
 
+  function isFacebookIcon(link, href) {
+    if (!link.closest(".socials")) return false;
+    try {
+      const host = new URL(href, window.location.href).hostname.toLowerCase();
+      return host === "facebook.com" || host === "fb.com" ||
+        host.endsWith(".facebook.com") || host.endsWith(".fb.com");
+    } catch (err) {
+      return false;
+    }
+  }
+
   document.addEventListener("click", (e) => {
     const link = e.target && e.target.closest ? e.target.closest("a") : null;
     if (!link) return;
@@ -36,6 +47,13 @@
     if (link.classList.contains("wa") || href.indexOf("wa.me") !== -1) {
       track("whatsapp_click", {
         method: "whatsapp",
+        link_url: href
+      });
+      return;
+    }
+    if (isFacebookIcon(link, href)) {
+      track("facebook_click", {
+        method: "facebook",
         link_url: href
       });
     }
