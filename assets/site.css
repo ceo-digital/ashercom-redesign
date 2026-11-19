@@ -75,6 +75,11 @@
     }
     .skip:focus, .skip:focus-visible { top: 12px; outline-color: var(--accent-2); }
 
+    /* The bar is injected inside #site-header. Sticky on header.site alone
+       cannot leave that wrapper, which is only as tall as the bar. */
+    #site-header {
+      position: sticky; top: 0; z-index: 50;
+    }
     header.site {
       position: sticky; top: 0; z-index: 50;
       background: var(--cream);
