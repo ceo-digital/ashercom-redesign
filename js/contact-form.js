@@ -1,5 +1,7 @@
 (function () {
   const TO = "asher@ashercom.com";
+  // Public FormSubmit alias. Submissions still arrive at TO after the inbox confirms the form.
+  const FORM_ALIAS = "efb447a68420899a7777bccd3c283558";
   document.addEventListener("submit", async (e) => {
     const form = e.target.closest("form.contact-form");
     if (!form || form.classList.contains("is-sending") || form.classList.contains("is-sent")) return;
@@ -25,7 +27,7 @@
     }
 
     try {
-      const res = await fetch("https://formsubmit.co/ajax/" + TO, {
+      const res = await fetch("https://formsubmit.co/ajax/" + FORM_ALIAS, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(data)
