@@ -85,7 +85,7 @@ window.ASHER_EN = {
   "art.control.p": "In the 21st century computers are everywhere — in homes and in businesses. Another clear trend is the growing need for communication between them.",
   "rank.infra.h": "Communications infrastructure",
   "rank.infra.p": "We provide communications solutions in fiber optics, telephony, computers, PA systems and low-voltage systems. Asher Communications works nationwide — consulting, planning, execution and supervision.",
-  "rank.contractor.h": "Communications infrastructure contractor",
+  "rank.contractor.h": "Nationwide planning and installation",
   "rank.contractor.p": "Whether you are planning an office, a building or a live site, communications infrastructure requires professional planning and installation. A communications infrastructure contractor defines the needs, maps the route and installs the network, telephony, computers and internet connection. Asher Communications provides consulting and deployment of the infrastructure the business needs to operate. Book a <a href=\"טכנאי-רשתות-תקשורת/\">communications technician</a>.",
   "rank.biz.h": "<a href=\"תשתיות-תקשורת-לעסקים/\">Communications infrastructure for businesses</a>",
   "rank.biz.p": "<a href=\"תשתיות-תקשורת-לעסקים/\">Communications infrastructure for businesses</a> is planned according to the scope of the site: workstations, route, and what must keep running. The business depends on stable communications — computers, internet and an internal network. Asher Communications designs and builds the infrastructure according to the needs of the business, including room to grow.",

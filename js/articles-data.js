@@ -573,5 +573,19 @@ window.ASHER_ARTICLES = [
       <p>ההתקנה צריכה צוות שמכיר גם מצלמות וגם תשתית. אחרת המערכת יושבת על רשת חלשה ונופלת עם העומס. אשר תקשורת מתקינה <a href="service.html?id=cameras"><strong>מערכת מצלמות אבטחה</strong></a> כחלק מהתקשורת של העסק, לא כתוסף נפרד.</p>
       <p class="seo-more">לייעוץ: <a href="article.html?id=security-cameras"><strong>התקנת מצלמות אבטחה</strong></a> או <a href="tel:1700505616">1-700-505-616</a></p>
     `
+  },
+  {
+    id: "biz-adapt",
+    title: "שלבים בהתאמת תשתית התקשורת",
+    tag: "מן התקשורת",
+    read: "מן התקשורת",
+    img: "wp-content/uploads/2024/09/איך-מתאימים-תשתיות-תקשורת-לעסקים.jpg",
+    dek: "שלבים בהתאמת תשתית התקשורת — מן התקשורת. אשר תקשורת, קבלן תשתיות תקשורת בפריסה ארצית.",
+    related: ["biz-solutions", "internet-business", "infra-upgrade"],
+    body: `
+      <p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-1620" src="wp-content/uploads/2024/09/איך-מתאימים-תשתיות-תקשורת-לעסקים.jpg" alt="שלבים בהתאמת תשתית התקשורת" width="703" height="774"></p>
+      <p>העבודה הזו היא חלק מ<a href="תשתיות-תקשורת-לעסקים/"><strong>תשתיות תקשורת לעסקים</strong></a>.</p>
+      <h2><strong><a href="https://articlesonline.co.il/%d7%90%d7%99%d7%9a-%d7%9e%d7%aa%d7%90%d7%99%d7%9e%d7%99%d7%9d-%d7%aa%d7%a9%d7%aa%d7%99%d7%95%d7%aa-%d7%aa%d7%a7%d7%a9%d7%95%d7%a8%d7%aa-%d7%9c%d7%a2%d7%a1%d7%a7%d7%99%d7%9d/">למעבר לכתבה המלאה &gt;&gt;</a></strong></h2>
+    `
   }
 ];
